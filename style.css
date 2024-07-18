@@ -9,6 +9,7 @@ footer {
 .footer-content {
     max-width: 1000px;
     margin: auto;
+    padding: 0 20px;
 }
 
 .footer-content h3 {
@@ -21,25 +22,54 @@ footer {
     line-height: 24px;
 }
 
-.socials {
-    list-style: none;
-    padding: 0;
+.contact-form {
+    margin: 20px 0;
 }
 
-.socials li {
-    display: inline-block;
-    margin: 0 10px;
+.contact-form h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-.socials a {
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
     color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-.socials a:hover {
-    color: #00aced;
+button:hover {
+    background-color: #0056b3;
 }
 
 .footer-bottom {
