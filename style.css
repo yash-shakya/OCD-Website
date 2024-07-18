@@ -9,6 +9,12 @@ header {
     float: right;
 }
 
+/* Body Styles */
+.body-content{
+    padding: 10px 0;
+    margin: 20px;
+}
+
 /* Footer Styles */
 footer {
     background-color: #222;
