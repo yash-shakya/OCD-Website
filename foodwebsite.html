@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Service In India | <MyOnlineMeal.com</title>
+    <style>
+#navbar{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    clip-path: circle();
+    height: 60px;
+    margin: 3px 6px;
+}
+#navbar{
+    position: relative;
+}
+#navbar ul{
+    display: flex;
+    font-family:BlinkMacSystemFont;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity:0.4;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+} 
+#navbar ul li a{
+    color:black;
+    display: block;
+    padding: 3px 34px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color:white;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background:url("https://cdn.pixabay.com/photo/2018/07/18/06/36/egg-net-3545650_640.jpg") no-repeat center /cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif',serif;
+}
+#home p{
+    color: lavender;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+
+}
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    color: white;
+    text-align: center;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(241, 34, 34);
+    margin: 15px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(252, 126, 206, 0.911);
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://image.similarpng.com/very-thumbnail/2021/09/Good-food-logo-design-on-transparent-background-PNG.png" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">Dishes</a></li>
+            <li class="item"><a href="#">Check Offers</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome To MyOnlineMeal</h1>
+        <p>Dessert probably the most important stage of meal,since it will be the last thing your guests remember!</p>
+        <p>To eat is necessity,but to eat intelligently is an art!</p>
+        <p>Our Food depends on your mood!</p>
+        <button class="btn">Order Your Dish Now</button>
+    </section>
+    <section class="servicses-container"></section>
+    <h1 class="h-primary center">Our Services</h1>
+    <div id="services">
+        <div class="box"></div>
+        <img src="https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg?auto=compress&cs=tinysrgb&w=300" height="300px" width="355px">
+        <img src="https://images.pexels.com/photos/2205270/pexels-photo-2205270.jpeg?auto=compress&cs=tinysrgb&w=300" height="300px" width="355px">
+        <img src="https://images.pexels.com/photos/13814644/pexels-photo-13814644.jpeg?auto=compress&cs=tinysrgb&w=300" height="300px" width="355px">
+        <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=300" height="300px" width="355px">
+        <img src="https://images.pexels.com/photos/2819094/pexels-photo-2819094.jpeg?auto=compress&cs=tinysrgb&w=300" height="300px" width="355px">
+        <img src="https://images.pexels.com/photos/2531546/pexels-photo-2531546.jpeg?auto=compress&cs=tinysrgb&w=300" height="300px" width="355px">
+        <img src="https://images.pexels.com/photos/2836443/pexels-photo-2836443.jpeg?auto=compress&cs=tinysrgb&w=300" height="300px" width="355px">
+        <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg" height="300px" width="355px">
+
+    </div>
+</body>
+</html>
