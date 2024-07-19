@@ -19,11 +19,18 @@
     </div>
     <!-- Pop-up Section end  -->
     <!-- Header Section-->
-     <header>
-        <div class = "header-content">
-            <input type="text" placeholder="Search" class="search-bar">
-        </div>
-     </header>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbaritem"> <a href="index.html" class="navbarlink">Home</a></li>
+                <li class="navbaritem"> <a href="about.html" class="navbarlink">About</a></li>
+            </ul>
+            <form class="searchform" action="#" method="get">
+                <input type="text" placeholder="search.." class="search-input" >
+                <button type="submit" class="searchbutton">Search</button>
+            </form>
+        </nav>
+    </header>
 
     <!-- Your existing body content -->
      <div class="body-content">
@@ -58,7 +65,7 @@
                         <label for="contact">Contact Number:</label>
                         <input type="tel" id="contact" name="contact">
                     </div>
-                    <button type="submit">Submit</button>
+                    <button class="button" "submit">Submit</button>
                 </form>
             </div>
             <div id="formResponse" style="display:none;">Thank you for your message!</div>

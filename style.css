@@ -1,12 +1,41 @@
-/* Header Styles */
-header {
-    background-color: #fff;
-    padding: 10px 0;
-    margin: 20px;
+/* Navbar Styles */
+body{
+    margin: 0;
+    
 }
-
-.search-bar{
-    float: right;
+.navbar{
+    background-color: rgb(31, 31, 31);
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-list{
+    list-style: none;
+    display: flex;
+    margin: 20px 15px 20px 15px;
+    
+}
+.navbaritem{
+    padding: 0 25px;
+    
+}
+.navbarlink{
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbarlink:hover{
+    color: rgb(158, 157, 157);
+    text-decoration: underline;
+}
+.searchbutton{
+    border: none;
+    cursor: pointer;
+}
+.searchbutton:hover{
+    background-color: rgb(158, 157, 157);
+    color: rgb(17, 17, 17);
 }
 
 /* Body Styles */
@@ -86,7 +115,7 @@ footer {
     border-radius: 4px;
 }
 
-button {
+.button {
     padding: 10px 15px;
     border: none;
     background-color: #007bff;
@@ -97,7 +126,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.button:hover {
     background-color: #0056b3;
 }
 
