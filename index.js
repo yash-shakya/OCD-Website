@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to close the popup banner
-    closeBtn.addEventListener('click', function() {
+    window.addEventListener('click', function() {
         popupBanner.style.display = 'none';
     });
 
