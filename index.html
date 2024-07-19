@@ -5,27 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Add languages bar</title>
+    <title>OCD Website</title>
 
     <title>OCD Society</title>
     <link rel="icon" type="image/x-icon" href="ocdlogo.png">
 
 
     <!-- Link the CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <body class="light-mode">
 
-    <!-- dark mode toggle button -->
-
-
-
+    <!-- dark mode toggle button -->  
     <!-- Pop-up Section Start -->
     <div id="popup-banner" class="popup-banner">
-        <div class="popup-content">
-            <span id="close-btn" class="close-btn">&times;</span>
+        <span id="close-btn" class="close-btn" ">&times;</span>
+        <div class="popup-content" style="align-items:center;text-align:center ;">
+            
             <h2>Welcome to OCD Website !</h2>
             <p>We are currently working on DSA, Competitive Programming, and a 30 Days Java challenge. Join us and
                 enhance your coding skills!</p>
@@ -35,22 +33,8 @@
     <!-- Header Section-->
     <header>
         <div class="header-content">
-
-            <input type="text" placeholder="Search" class="search-bar"><br>
-
-            <!-- Add language bar start -->
-            <div id="google_translate_element"></div>
-            <script>
-                function googleTranslateElementInit() {
-                    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-                }
-            </script>
-            <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-            <!-- add language bar ends-->
-             
-        </div>
-    </header>
-
+            <div class="left">
+                
             <div class="logo-div">
                 <img class='logo' src="ocdlogo.png">
             </div>
@@ -67,14 +51,30 @@
                 <h3><a href="ContactUs.html">CONTACT US</a></h3>
             </div>
            
+            </div>
             <div class="emptydiv"></div>
-            <input type="text" placeholder="Search" class="search-bar">
+            <div class="right">
+                <input type="text" placeholder="Search" class="search-bar">
+            <div id="google_translate_element"></div>
+            <script>
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                }
+            </script>
+            <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <!-- add language bar ends-->
+            <div  id="dark-btn-holder" align="right">
+                <button id="dark-mode-toggle" class="button" >Dark Mode</button>
+            </div>
+            </div>
+
         </div>
+       
     </header>
      <!-- dark mode toggle button -->
-     <div align="right">
-        <button id="dark-mode-toggle" class="button">Dark Mode</button>
-    </div>
+           
+    </header>
+
 
 
 
@@ -170,9 +170,10 @@
                 </form>
 
         <!-- suggestion box -->
-        <div class="suggestion"><a href="./suggestion.html">Help Us To Improve</a></div>
+        
 
         <div class="footer-bottom">
+            <div class="suggestion"><a href="./suggestion.html">Help Us To Improve</a></div>
             <p>&copy; 2024 OCD Society NIT KKR. All Rights Reserved.</p>
         </div>
     </footer>
