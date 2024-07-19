@@ -1,3 +1,20 @@
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    margin: 20px;
+}
+
+.search-bar{
+    float: right;
+}
+
+/* Body Styles */
+.body-content{
+    padding: 10px 0;
+    margin: 20px;
+}
+
 /* Footer Styles */
 footer {
     background-color: #222;
