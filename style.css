@@ -47,7 +47,11 @@ p {
 }
 
 .header-text {
-    color: #0c2e53
+    color: #0c2e53;
+}
+
+header .header-content .header-text a{
+    text-decoration: none;
 }
 
 .emptydiv {
