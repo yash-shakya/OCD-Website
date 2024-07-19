@@ -1,8 +1,7 @@
-/* Header Styles */
-header {
-    background-color: #fff;
-    padding: 10px 0;
-    margin: 20px;
+/* Navbar Styles */
+body{
+    margin: 0;
+    
 }
 
 .header-content
@@ -43,19 +42,31 @@ header {
     margin-right:20px;
     height: 25px;
     background-color: rgb(255, 255, 255);
-}
+
 
 /* Body Styles */
+body{
+    min-height: 100vh;
+    margin-bottom: -5px;
+}
 .body-content{
-    padding: 10px 0;
-    margin: 20px;
+    padding: 10px 0 0 0;
+    margin: 20px 20px 0 20px;
+   
 }
 
 /* Footer Styles */
+.sticky-footer{
+    position: sticky;
+    top: 100%;
+}
 footer {
     background-color: #222;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     text-align: center;
 }
 
@@ -110,7 +121,7 @@ footer {
     border-radius: 4px;
 }
 
-button {
+.button {
     padding: 10px 15px;
     border: none;
     background-color: #007bff;
@@ -121,7 +132,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.button:hover {
     background-color: #0056b3;
 }
 
