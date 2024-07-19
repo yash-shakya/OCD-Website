@@ -25,6 +25,5 @@ document.addEventListener('DOMContentLoaded', function() {
         popupBanner.style.display = 'none';
     });
 
-    // Show the popup after a delay (e.g., 3 seconds)
     setTimeout(showPopup, 1000);
 });
