@@ -249,3 +249,26 @@ h2 {
 
 
 /* all changes pushed into branch */
+
+/* suggestion box  */
+.suggestion{
+    position: fixed;
+    right: 10px;
+    bottom: 100px;
+
+    width: 100px;
+    height: 100px;
+    background-color: #414141;
+
+    border-radius: 50%;
+    
+    box-shadow: 10px 10px 20px;
+}
+.suggestion a{
+    position: absolute;
+    top:30px;
+    left: 0px;
+
+    text-decoration: none;
+    color:yellow;
+}
