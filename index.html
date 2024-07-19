@@ -4,16 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add languages bar</title>
+
     <title>OCD Society</title>
     <link rel="icon" type="image/x-icon" href="ocdlogo.png">
+
 
     <!-- Link the CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
 <body class="light-mode">
 
     <!-- dark mode toggle button -->
+
 
 
     <!-- Pop-up Section Start -->
@@ -29,6 +35,22 @@
     <!-- Header Section-->
     <header>
         <div class="header-content">
+
+            <input type="text" placeholder="Search" class="search-bar"><br>
+
+            <!-- Add language bar start -->
+            <div id="google_translate_element"></div>
+            <script>
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                }
+            </script>
+            <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <!-- add language bar ends-->
+             
+        </div>
+    </header>
+
             <div class="logo-div">
                 <img class='logo' src="ocdlogo.png">
             </div>
@@ -53,6 +75,7 @@
      <div align="right">
         <button id="dark-mode-toggle" class="button">Dark Mode</button>
     </div>
+
 
 
     <!-- Your existing body content -->
@@ -85,7 +108,6 @@
         <div class="footer-content">
             <h3>OCD Society NIT KKR</h3>
             <p>Fostering innovation and collaboration among the coding enthusiasts of NIT Kurukshetra.</p>
-
 
             <!-- Contact Form -->
             <div class="contact-form">

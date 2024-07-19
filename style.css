@@ -1,3 +1,15 @@
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #fcfafa;
+    padding: 10px 0; 
+    margin: 20px;
+
 /* Navbar Styles */
 
 body {
@@ -36,6 +48,7 @@ p {
 
 .emptydiv {
     width: 300px;
+
 }
 
 .search-bar {
@@ -43,6 +56,10 @@ p {
     margin-right: 20px;
     height: 25px;
     background-color: rgb(255, 255, 255);
+}
+#google_translate_element{
+    float:right; 
+    background-color:rgb(191, 171, 225);
 }
 
 
