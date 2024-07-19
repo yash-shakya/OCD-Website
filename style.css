@@ -10,16 +10,28 @@ header {
 }
 
 /* Body Styles */
+body{
+    min-height: 100vh;
+    margin-bottom: -5px;
+}
 .body-content{
-    padding: 10px 0;
-    margin: 20px;
+    padding: 10px 0 0 0;
+    margin: 20px 20px 0 20px;
+   
 }
 
 /* Footer Styles */
+.sticky-footer{
+    position: sticky;
+    top: 100%;
+}
 footer {
     background-color: #222;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     text-align: center;
 }
 
