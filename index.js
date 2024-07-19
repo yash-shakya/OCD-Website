@@ -71,3 +71,42 @@ storebtn.addEventListener("click",()=>{
     localStorage.setItem("message",message);
     localStorage.setItem("contact",contactnumber);
 })
+
+// JS for option to choose between programms
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('popup');
+    const closeBtn = document.querySelector('.close');
+
+    // Show the popup after a delay (e.g., 1 second)
+    setTimeout(() => {
+        popup.style.display = 'block';
+    }, 1000);
+
+    // Close the popup when the user clicks the close button
+    closeBtn.onclick = function() {
+        popup.style.display = 'none';
+    };
+
+    // Close the popup when the user clicks anywhere outside of the popup content
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = 'none';
+        }
+    };
+});
+
+function selectOption(option) {
+    let url = '';
+    switch(option) {
+        case 'DSA':
+            url = 'https://example.com/dsa-demo';
+            break;
+        case 'CP':
+            url = 'https://example.com/cp-demo';
+            break;
+        case 'JavaScript':
+            url = 'https://example.com/javascript-demo';
+            break;
+    }
+    window.location.href = url;
+}
