@@ -1,13 +1,48 @@
-/* Header Styles */
-header {
-    background-color: #fff;
-    padding: 10px 0;
-    margin: 20px;
+/* Navbar Styles */
+body{
+    margin: 0;
+    
+}
+
+.header-content
+{
+    margin-top:-20px;
+    height:40px;
+    width:auto;
+    margin-left:-15px;
+    margin-right:-15px;
+    background-color: #7cabde;
+    border:2px solid rgb(2, 2, 24);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo
+{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.header-text
+{
+    color:#0c2e53
+}
+.emptydiv
+{
+    width:300px;
 }
 
 .search-bar{
-    float: right;
-}
+    width:300px;
+    margin-right:20px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+
 
 /* Body Styles */
 body{
@@ -86,7 +121,7 @@ footer {
     border-radius: 4px;
 }
 
-button {
+.button {
     padding: 10px 15px;
     border: none;
     background-color: #007bff;
@@ -97,7 +132,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.button:hover {
     background-color: #0056b3;
 }
 
