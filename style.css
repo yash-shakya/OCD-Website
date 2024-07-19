@@ -99,3 +99,38 @@ button:hover {
     margin: 0;
     font-size: 14px;
 }
+
+
+/* Pop-up Styles */
+.popup-banner {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(245, 245, 220,0.5);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.popup-content {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color:#222;
+}
+/* Pop-up style ends */
