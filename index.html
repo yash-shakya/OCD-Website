@@ -4,13 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Add languages bar</title>
+
+    <title>OCD Society</title>
+    <link rel="icon" type="image/x-icon" href="ocdlogo.png">
+
 
     <!-- Link the CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+<body class="light-mode">
+
+    <!-- dark mode toggle button -->
+
+
+
     <!-- Pop-up Section Start -->
     <div id="popup-banner" class="popup-banner">
         <div class="popup-content">
@@ -24,6 +35,7 @@
     <!-- Header Section-->
     <header>
         <div class="header-content">
+
             <input type="text" placeholder="Search" class="search-bar"><br>
 
             <!-- Add language bar start -->
@@ -39,6 +51,33 @@
         </div>
     </header>
 
+            <div class="logo-div">
+                <img class='logo' src="ocdlogo.png">
+            </div>
+            <div class="header-text">
+                <h3>EVENTS</h3>
+            </div>
+            <div class="header-text">
+                <h3>ABOUT</h3>
+            </div>
+            <div class="header-text">
+                <h3>TEAM</h3>
+            </div>
+            <div class="header-text">
+                <h3><a href="ContactUs.html">CONTACT US</a></h3>
+            </div>
+           
+            <div class="emptydiv"></div>
+            <input type="text" placeholder="Search" class="search-bar">
+        </div>
+    </header>
+     <!-- dark mode toggle button -->
+     <div align="right">
+        <button id="dark-mode-toggle" class="button">Dark Mode</button>
+    </div>
+
+
+
     <!-- Your existing body content -->
     <div class="body-content">
         <h1>OCD Society NIT KKR</h1>
@@ -48,7 +87,7 @@
     </div>
 
     <!-- Footer Section -->
-    <footer>
+    <footer class="sticky-footer">
         <div class="footer-content">
             <h3>OCD Society NIT KKR</h3>
             <p>Fostering innovation and collaboration among the coding enthusiasts of NIT Kurukshetra.</p>
@@ -73,7 +112,7 @@
                         <label for="contact">Contact Number:</label>
                         <input type="tel" id="contact" name="contact">
                     </div>
-                    <button type="submit">Submit</button>
+                    <button class="button" "submit">Submit</button>
                 </form>
             </div>
             <div id="formResponse" style="display:none;">Thank you for your message!</div>
