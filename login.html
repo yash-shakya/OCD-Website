@@ -81,14 +81,15 @@ button {
 </head>
 <body>
     <section class="container">
-        <h1<font size="7" type="comic sans MS" COLOR="white"><b> Welcome to OCD </b></font></h1>
+        <h1 style="font-size: 7rem; font-family: 'Comic Sans MS'; color: white;"><b>Welcome to OCD</b></h1>
+
         
     <form id="loginForm"action="index.html">
         <fieldset>
     
         
         <label for="login">Email : </label>
-        <input  type="text" id="login" name="login">
+        <input  type="text" id="email" name="login">
         <br>
         <br/>
         <label for="phone">Phone No. : </label>
@@ -113,40 +114,12 @@ button {
       </div>
         <button >Submit</button>
         <br>
+        <p id="message"></p>
         <br>
     </form>
 </fieldset>
 </section>
-<script>
-   function generateCaptcha() {
-            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            let captcha = '';
-            for (let i = 0; i < 6; i++) {
-                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            document.getElementById('captcha').textContent = captcha;
-        }
 
-        document.getElementById('refreshCaptcha').addEventListener('click', generateCaptcha);
-
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const enteredCaptcha = document.getElementById('captchaInput').value;
-            const generatedCaptcha = document.getElementById('captcha').textContent;
-
-            if (enteredCaptcha === generatedCaptcha) {
-                alert('Login successful! Redirecting to the main website...');
-                // Here you would typically redirect to your main website
-                // window.location.href = 'your-main-website-url';
-            } else {
-                alert('CAPTCHA verification failed. Please try again.');
-                generateCaptcha();
-                document.getElementById('captchaInput').value = '';
-            }
-        });
-
-        // Generate initial CAPTCHA when the page loads
-        generateCaptcha();
-</script>
+<script src="validatelogin.js">
 </body>
 </html>
