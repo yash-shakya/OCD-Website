@@ -28,3 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// JS code for Pop-up section
+
+document.addEventListener("DOMContentLoaded", function () {
+  var popupBanner = document.getElementById("popup-banner");
+  //   var closeBtn = document.getElementById("close-btn");
+
+  // Function to show the popup banner
+  function showPopup() {
+    popupBanner.style.display = "block";
+  }
+  // function to hide popup banner
+  window.hidepopup = function () {
+    const popup = document.getElementById("popup-banner");
+    popup.style.display = "none";
+  };
+  setTimeout(showPopup, 700);
+});
+
+// JS code for Pop-up section ends here

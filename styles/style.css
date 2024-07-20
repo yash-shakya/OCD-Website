@@ -150,6 +150,104 @@ body.dark-mode .dark-mode-button:hover {
 }
 
 /* Dark mode changes end here */
+/* Pop-up Styles */
+
+@keyframes fadeIn {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+
+    70% {
+        scale: 1.1;
+        opacity: 0.7;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+#h2-of-popup{
+    font-size: 192%;
+    margin-bottom: 1rem;
+    line-height: 1.9rem;
+    font-weight: 600;
+}
+
+#popup-banner {
+    font-family: "Kalnia Glaze", serif;
+    display: none;
+    position: fixed;
+    top: 57vh;
+    right: 2vw;
+    width: 17vw;
+    height: 38vh;
+    min-width: 250px;
+    min-height: 200px;
+    
+    overflow-y: hidden;
+    text-align: center;
+    padding: 1.7rem;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    animation: fadeIn 1.7s ease-in;
+     background-color: #d7fdf0;
+    color: #4278a5;
+    border-radius: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6rem;
+       
+}
+
+
+
+#popup-banner:hover {
+    transform: scale(1.001);
+
+    filter: drop-shadow(0px 0px 6px rgba(4, 44, 22, 0.555));
+}
+
+
+#close-btn-popup {
+    position: absolute;
+   right: 2%;
+    top: 2%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #222;
+    transition: all 0.4s ease-in;
+
+}
+
+#close-btn-popup:hover {
+    color: rgb(254, 10, 10);
+    font-weight: 600;
+    transform: scale(1.4);
+    filter: drop-shadow(0px 0px 3px rgb(15, 15, 15));
+
+}
+
+#join-btn-popup {
+    position: absolute;
+    right: 4.8rem;
+    margin-top: .9rem;
+    height: 5vh;
+    width: 7vw;
+    transition: all 0.5s ease;
+    background-color: #1ada9aa4;
+    color: black;
+    border-radius: 1rem;
+}
+
+#join-btn-popup:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+/* pop-up styles end here */
 
 
 /* Hero Section Styles */
