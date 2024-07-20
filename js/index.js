@@ -28,6 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("theme", "dark");
     }
   });
+  const navToggle = document.getElementById('nav-toggle');
+  const navLeft = document.querySelector('.nav-left');
+  const navRight = document.querySelector('.nav-right');
+  if (!navToggle) {
+      console.error('Navbar toggle button not found');
+      return;
+  }
+  navToggle.addEventListener('click', () => {
+    navLeft.classList.toggle('active');
+    navRight.classList.toggle('active');
+  });
 });
 
 // JS code for Pop-up section
