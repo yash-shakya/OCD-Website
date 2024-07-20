@@ -68,4 +68,46 @@
 }
 
 
+/* ADD THESE NEW STYLES */
+/* Ensure dark mode affects all major sections */
+body.dark-mode .container,
+body.dark-mode nav,
+body.dark-mode .contact-section,
+body.dark-mode .contact-form{
+    background-color: #333; /* Slightly lighter than body for contrast */
+    color: #ffffff;
+}
+
+/* Adjust text color for better visibility in dark mode */
+body.dark-mode .nav-text a,
+body.dark-mode .labels{
+    color: #ffffff;
+}
+
+body.dark-mode .dark-mode-button {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Adjust button hover state in dark mode */
+body.dark-mode .dark-mode-button:hover {
+    background-color: #09fd56;
+    color: #000;
+}
+
+/* Hide moon icon by default (assuming light mode is default) */
+.dark-mode-button .fa-moon {
+    display: none;
+  }
+  
+  /* Show moon icon and hide sun icon in dark mode */
+  body.dark-mode .dark-mode-button .fa-moon {
+    display: inline-block;
+  }
+  
+  body.dark-mode .dark-mode-button .fa-sun {
+    display: none;
+}
+
+/* Dark mode changes end here */
 
