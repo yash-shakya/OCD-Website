@@ -107,12 +107,6 @@ body.dark-mode {
     color: #ffffff; 
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #222; 
-    color: #ffffff; 
-}
-
 /* ADD THESE NEW STYLES */
 /* Ensure dark mode affects all major sections */
 body.dark-mode .hero-section,
