@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OCD Website</title>
     <link rel="icon" type="image/x-icon" href="./public/ocdlogo.png" />
-   
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -40,6 +40,21 @@
         </div>
       </div>
     </nav>
+
+    <!-- Pop-up Section Start -->
+    <div id="popup-banner" class="popup-banner">
+      <span id="close-btn-popup" class="close-btn" onclick="hidepopup()"
+        >✘</span
+      >
+      <p id="h2-of-popup">Welcome to OCD Website !</p>
+      <p>
+        We are currently working on DSA, Competitive Programming, and a 30 Days
+        Java challenge. Join us and enhance your coding skills!
+      </p>
+      <!-- button for linking login page -->
+      <a href="#"><button id="join-btn-popup">Join</button></a>
+    </div>
+    <!-- Pop-up Section end  -->
 
     <!-- Hero Section -->
 
@@ -204,11 +219,8 @@
               alt="OCD Logo"
             />
           </a>
-          <p>
-            &copy; 2024 Open Code Developers Society, NIT Kurukshetra. 
-          </p>
-          <p>All
-            rights reserved.</p>
+          <p>&copy; 2024 Open Code Developers Society, NIT Kurukshetra.</p>
+          <p>All rights reserved.</p>
         </div>
         <div class="footer-center">
           <h3>Quick Links</h3>
@@ -231,7 +243,6 @@
       </div>
     </footer>
 
-   
     <script src="./js/index.js"></script>
   </body>
 </html>
