@@ -173,7 +173,7 @@ body.dark-mode .dark-mode-button .fa-sun {
     top: 10%;
     right: 3vw;
     width: 250px;
-    height: 300px;
+    height: 320px;
     overflow-y: hidden;
     text-align: center;
     padding: 1.7rem;
@@ -211,7 +211,7 @@ body.dark-mode .dark-mode-button .fa-sun {
 }
 
 #join-btn-popup {
-    position: absolute;
+    /* position: absolute; */
     right: 4.8rem;
     margin-top: .9rem;
     height: 5vh;
@@ -220,6 +220,7 @@ body.dark-mode .dark-mode-button .fa-sun {
     background-color: #1ada9aa4;
     color: black;
     border-radius: 1rem;
+    
 }
 
 #join-btn-popup:hover {
