@@ -105,6 +105,26 @@ body.dark-mode {
     color: #ffffff; 
 }
 
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.user-info-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
 body.dark-mode .hero-section,
 body.dark-mode nav,
 body.dark-mode .team-section,
