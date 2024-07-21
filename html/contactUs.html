@@ -14,6 +14,7 @@
     />
 
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/contactPopUp.css">
     
 </head>
 <body>
@@ -45,7 +46,14 @@
   </nav>
 
 <!-- Contact Section -->
-<section class="contact-section">
+<section class="contact-section"> 
+    <!-- Pop up window after submit of form -->
+    <div id="popup" class="popup-hidden">
+      <div class="popup-content">
+           <p id="popup-message"></p>
+           <button id="close-popup">Close</button>
+      </div>
+    </div>
     <header>
         <div class="header-container">
             <h1>Contact Us</h1>
@@ -54,9 +62,10 @@
     </header>
 
     <div class="container">
-        <form class="contact-form" action="submit-form.php" method="post">
+       
+        <form class="contact-form" id="myForm" action="submit-form.php" method="post">
             <label for="name" class="labels">Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name"  name="name" required />
 
             <label for="email" class="labels">Email:</label>
             <input type="email" id="email" name="email" required />
@@ -67,6 +76,7 @@
             <button type="submit" class="submit-button">Send Message</button>
         </form>
     </div>
+       
 </section>
 
 
@@ -118,8 +128,9 @@
   src="https://kit.fontawesome.com/a076d05399.js"
   crossorigin="anonymous"
 ></script>
-<script src="../js/contactUs_authentication.js"></script>
+<!-- <script src="../js/contactUs_authentication.js"></script> -->
 <script src="../js/index.js"></script>
+<script src="../js/contactSubmittionPopUp.js"></script>
 </body>
 </html>
 
