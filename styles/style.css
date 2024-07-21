@@ -7,7 +7,7 @@
 
 /* Navbar Styles */
 nav {
-    background-color: #fcfafa;
+    background-color: rgb(10, 17, 76);
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -51,7 +51,7 @@ nav {
 }
 
 .nav-text a {
-    color: #333;
+    color: #eee9e9;
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
@@ -404,7 +404,7 @@ body.dark-mode .dark-mode-button .fa-sun {
 }
 
 .team-card {
-    background-color: white;
+    background-color: rgb(241, 223, 223);
     color:#000000 ;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
