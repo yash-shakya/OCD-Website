@@ -7,7 +7,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent form submission
 
     // Replace with your desired message
-    popupMessage.textContent = "Form submitted successfully!";
+    popupMessage.textContent = "Thanks to Connect!";
 
     popup.classList.remove('popup-hidden');
 });

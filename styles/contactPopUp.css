@@ -3,7 +3,7 @@
 }
 
 .popup {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -27,9 +27,10 @@
 }
 
 .popup-content {
-    background-color: #d5c0c0;
+    background-color: #434141;
     padding: 20px;
     text-align: center;
+    display: block;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -37,7 +38,7 @@
     background-color: #09fd56; /* Bright green for visibility */
     color: #000; /* Dark text for contrast */
     border-radius: 5px;
-    padding: 12px 24px;
+    padding: 8px 16px;
     font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
