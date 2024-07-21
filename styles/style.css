@@ -117,6 +117,10 @@ body.dark-mode .nav-text a {
     color: #ffffff;
 }
 
+body.dark-mode .nav-toggle i {
+    color: #ffffff;
+}
+
 body.dark-mode .dark-mode-button {
     background-color: #ffffff;
     color: #333;
@@ -266,7 +270,7 @@ body.dark-mode .dark-mode-button .fa-sun {
 
     .search-bar {
         margin-top: 10px;
-        width: 100%;
+        width: 15%;
     }
 
     .hero-content {
