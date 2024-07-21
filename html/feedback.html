@@ -64,8 +64,60 @@
     button:hover {
         background-color: #0056b3;
     }
+    /* Ensure dark mode affects all major sections */
+    
+    body.dark-mode nav,
+    body.dark-mode .form-group {
+    background-color: #333; /* Slightly lighter than body for contrast */
+    color: #ffffff;
+    }
+
+    body.dark-mode .feedback-section{
+    color: #ffffff;
+    }
+
+    body.dark-mode .dark-mode-button {
+    background-color: #ffffff;
+    color: #333 ;
+     }
+
+    /* Adjust button hover state in dark mode */
+    body.dark-mode .dark-mode-button:hover {
+    background-color: #09fd56;
+    color: #000;
+    }
+
+    /* Hide moon icon by default (assuming light mode is default) */
+   .dark-mode-button .fa-moon {
+    display: none;
+    }
+  
+    /* Show moon icon and hide sun icon in dark mode */
+    body.dark-mode .dark-mode-button .fa-moon {
+    display: inline-block;
+   }
+  
+    body.dark-mode .dark-mode-button .fa-sun {
+    display: none;
+    }
+
+/* Dark mode changes end here */
+
 </style>
 <body>
+    <!--NAV-BAR-->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-right">
+                <button id="dark-mode-toggle" class="dark-mode-button">
+                  <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
+                  <i class="fas fa-moon"></i> <!-- Moon icon for dark mode -->
+                </button>
+              </div>
+        </div>
+    </nav>
+
+    <!--Feedback-Section-->
     <div class="feedback-section">
         <h2>Feedback</h2>
         <form action="submit_feedback.php" method="post">
