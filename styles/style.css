@@ -71,14 +71,6 @@ nav {
     border-radius: 5px;
 }
 
-.search-button {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 70px;
-    height: 31px;
-    cursor: pointer;
-}
-
 .dark-mode-button {
     padding: 10px;
     border: none;
