@@ -43,16 +43,17 @@
         </button>
       </div>
     </div>
+  </nav>
+
+<!-- Contact Section -->
+<section class="contact-section"> 
+    <!-- Pop up window after submit of form -->
     <div id="popup" class="popup-hidden">
       <div class="popup-content">
            <p id="popup-message"></p>
            <button id="close-popup">Close</button>
       </div>
     </div>
-  </nav>
-
-<!-- Contact Section -->
-<section class="contact-section"> 
     <header>
         <div class="header-container">
             <h1>Contact Us</h1>
@@ -64,7 +65,7 @@
        
         <form class="contact-form" id="myForm" action="submit-form.php" method="post">
             <label for="name" class="labels">Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name"  name="name" required />
 
             <label for="email" class="labels">Email:</label>
             <input type="email" id="email" name="email" required />
@@ -75,8 +76,6 @@
             <button type="submit" class="submit-button">Send Message</button>
         </form>
     </div>
-
-      <!-- Pop up window after submit of form -->
        
 </section>
 
