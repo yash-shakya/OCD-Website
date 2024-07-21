@@ -1,0 +1,146 @@
+/* signup section */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.signup-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.signup-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-header h1 {
+    margin: 0;
+    color: #333;
+}
+
+.signup-header p {
+    color: #777;
+    margin: 5px 0 0;
+}
+
+.signup-form .form-group {
+    margin-bottom: 15px;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.signup-form .signup-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form .signup-btn:hover {
+    background-color: #0056b3;
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-redirect p {
+    color: #777;
+}
+
+.login-redirect a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}
+
+.suggestion {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #1206eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.suggestion a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* ADD THESE NEW STYLES */
+/* Ensure dark mode affects all major sections */
+body.dark-mode .content,
+body.dark-mode nav{
+    background-color: #333; /* Slightly lighter than body for contrast */
+    color: #ffffff;
+}
+
+/* Adjust text color for better visibility in dark mode */
+body.dark-mode .nav-text a{
+    color: #ffffff;
+}
+
+body.dark-mode .dark-mode-button {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Adjust button hover state in dark mode */
+body.dark-mode .dark-mode-button:hover {
+    background-color: #09fd56;
+    color: #000;
+}
+
+/* Hide moon icon by default (assuming light mode is default) */
+.dark-mode-button .fa-moon {
+    display: none;
+  }
+  
+  /* Show moon icon and hide sun icon in dark mode */
+  body.dark-mode .dark-mode-button .fa-moon {
+    display: inline-block;
+  }
+  
+  body.dark-mode .dark-mode-button .fa-sun {
+    display: none;
+}
+
+/* Dark mode changes end here */
+
