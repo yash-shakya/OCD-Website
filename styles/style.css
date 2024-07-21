@@ -6,7 +6,6 @@
 }
 
 /* Navbar Styles */
-
 nav {
     background-color: #fcfafa;
     padding: 10px 20px;
@@ -81,10 +80,10 @@ nav {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1rem; /* Adjusted for better responsiveness */
-    width: 40px; /* Adjust as needed */
-    height: 40px; /* Adjust as needed */
-    border-radius: 50%; /* Make the button circular */
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,17 +106,14 @@ body.dark-mode {
     color: #ffffff; 
 }
 
-/* ADD THESE NEW STYLES */
-/* Ensure dark mode affects all major sections */
 body.dark-mode .hero-section,
 body.dark-mode nav,
 body.dark-mode .team-section,
 body.dark-mode .team-card {
-    background-color: #333; /* Slightly lighter than body for contrast */
+    background-color: #333;
     color: #ffffff;
 }
 
-/* Adjust text color for better visibility in dark mode */
 body.dark-mode .nav-text a,
 body.dark-mode .team-info h3,
 body.dark-mode .team-info .role {
@@ -129,7 +125,6 @@ body.dark-mode .dark-mode-button {
     color: #333;
 }
 
-/* Adjust button hover state in dark mode */
 body.dark-mode .dark-mode-button:hover {
     background-color: #09fd56;
     color: #000;
@@ -138,38 +133,34 @@ body.dark-mode .dark-mode-button:hover {
 /* Hide moon icon by default (assuming light mode is default) */
 .dark-mode-button .fa-moon {
     display: none;
-  }
+}
   
-  /* Show moon icon and hide sun icon in dark mode */
-  body.dark-mode .dark-mode-button .fa-moon {
+/* Show moon icon and hide sun icon in dark mode */
+body.dark-mode .dark-mode-button .fa-moon {
     display: inline-block;
-  }
+}
   
-  body.dark-mode .dark-mode-button .fa-sun {
+body.dark-mode .dark-mode-button .fa-sun {
     display: none;
 }
 
-/* Dark mode changes end here */
 /* Pop-up Styles */
-
 @keyframes fadeIn {
     0% {
         scale: 0;
         opacity: 0;
     }
-
     70% {
         scale: 1.1;
         opacity: 0.7;
     }
-
     100% {
         scale: 1;
     }
 }
 
-#h2-of-popup{
-    font-size: 192%;
+#h2-of-popup {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     line-height: 1.9rem;
     font-weight: 600;
@@ -179,46 +170,37 @@ body.dark-mode .dark-mode-button:hover {
     font-family: "Kalnia Glaze", serif;
     display: none;
     position: fixed;
-    top: 57vh;
-    right: 2vw;
-    width: 17vw;
-    height: 38vh;
-    min-width: 250px;
-    min-height: 200px;
-    
+    top: 10%;
+    right: 3vw;
+    width: 250px;
+    height: 300px;
     overflow-y: hidden;
     text-align: center;
     padding: 1.7rem;
     z-index: 1000;
     transition: all 0.3s ease-out;
     animation: fadeIn 1.7s ease-in;
-     background-color: #d7fdf0;
+    background-color: #d7fdf0;
     color: #4278a5;
     border-radius: 2rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
     line-height: 1.6rem;
-       
 }
-
-
 
 #popup-banner:hover {
     transform: scale(1.001);
-
     filter: drop-shadow(0px 0px 6px rgba(4, 44, 22, 0.555));
 }
 
-
 #close-btn-popup {
     position: absolute;
-   right: 2%;
+    right: 2%;
     top: 2%;
     font-size: 20px;
     cursor: pointer;
     color: #222;
     transition: all 0.4s ease-in;
-
 }
 
 #close-btn-popup:hover {
@@ -226,7 +208,6 @@ body.dark-mode .dark-mode-button:hover {
     font-weight: 600;
     transform: scale(1.4);
     filter: drop-shadow(0px 0px 3px rgb(15, 15, 15));
-
 }
 
 #join-btn-popup {
@@ -244,13 +225,10 @@ body.dark-mode .dark-mode-button:hover {
 #join-btn-popup:hover {
     transform: scale(1.1);
     cursor: pointer;
-
 }
 
-/* pop-up styles end here */
-
- /* Responsive Navbar Styles starts*/
- .nav-toggle {
+/* Responsive Navbar Styles */
+.nav-toggle {
     display: none;
     background: none;
     border: none;
@@ -269,7 +247,6 @@ body.dark-mode .dark-mode-button:hover {
     .nav-content {
         flex-direction: column;
         align-items: flex-start;
-
     }
 
     .nav-left, .nav-right {
@@ -290,11 +267,25 @@ body.dark-mode .dark-mode-button:hover {
     }
 
     .search-bar {
-        width: 50%;
         margin-top: 10px;
+        width: 100%;
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .hero-text {
+        font-size: 18px; /* Adjust font size for readability */
     }
 
     
+    .hero-images {
+        gap: 100px; 
+    }
+    .hero-images img {
+        width: 60%; 
+    }
 }
 
 @media (max-width: 480px) {
@@ -309,8 +300,31 @@ body.dark-mode .dark-mode-button:hover {
     .nav-left {
         margin-bottom: 10px;
     }
+    
+    .hero-section {
+        padding: 30px 10px;
+    }
+
+    .hero-images img {
+        width: 60%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .team-card {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .hero-images {
+        gap: 100px; 
+    }
+    .hero-text {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
-/* Responsive Navbar Styles ends*/
 
 /* Hero Section Styles */
 .hero-section {
@@ -318,11 +332,10 @@ body.dark-mode .dark-mode-button:hover {
     background-color: #f9f9f9;
 }
 
-.hero-section h1{
+.hero-section h1 {
     text-align: center;
     margin-top: 25px;
-    font-size: 30px;
-
+    font-size: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -330,27 +343,29 @@ body.dark-mode .dark-mode-button:hover {
     max-width: 1200px;
     margin: auto;
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     justify-content: space-between;
     align-items: center;
 }
 
 .hero-text {
     flex: 1;
-    max-width: 50%;
+    max-width: 100%;
+    margin-right: 20px;
 }
 
 .hero-images {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    max-width: 50%;
+    gap: 100px;
+    max-width: 100%;
 }
 
 .hero-images img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: scale-down;
     border-radius: 10px;
 }
 
@@ -358,9 +373,8 @@ body.dark-mode .dark-mode-button:hover {
     margin: 20px 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     line-height: 1.6;
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 10px;
-    margin-right: 20px;
 }
 
 /* Team Section Styles */
@@ -368,7 +382,6 @@ body.dark-mode .dark-mode-button:hover {
     background-color: #ffffff;
     padding: 50px 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
 .team-container {
@@ -378,7 +391,7 @@ body.dark-mode .dark-mode-button:hover {
 
 .team-container h1 {
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -431,24 +444,21 @@ body.dark-mode .dark-mode-button:hover {
 }
 
 .social-icons a {
-    color: #0008ff; /* Main icon color */
-    font-size: 24px; /* Increase size if needed */
+    color: #0008ff;
+    font-size: 24px;
     transition: color 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 8px;
     border-radius: 50%;
-    background-color: #060000; /* Light background for visibility */
+    background-color: #060000;
     text-decoration: none;
 }
 
 .social-icons a:hover {
-    color: #000000; /* Change to your preferred hover color */
+    color: #000000;
 }
-
-
-
 
 /* Footer Styles */
 footer {
@@ -456,7 +466,6 @@ footer {
     color: #fff;
     padding: 40px 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
 .footer-container {
@@ -464,6 +473,7 @@ footer {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .footer-left {
@@ -523,10 +533,6 @@ ul li a:hover {
     text-align: center;
     padding-top: 20px;
 }
-
-
-
-
 
 /* Suggestion Box Styles */
 .suggestion {
