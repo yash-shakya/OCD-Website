@@ -8,7 +8,6 @@
 #herosectionheading{
   font-size: 45px;
   color: #0077b6;
-  font-style: italic;
   font-weight: bold;
 }
 /* Navbar Styles */
@@ -236,10 +235,14 @@ body.dark-mode .nav-toggle i {
     color: #ffffff;
 }
 
-body.dark-mode .dark-mode-button,
-body.dark-mode .programs-section h3 {
+body.dark-mode .dark-mode-button{
     background-color: #ffffff;
     color: #333;
+}
+
+body.dark-mode .programs-section h3 {
+  background-color:#d9e0ff;
+  color: #333;
 }
 
 body.dark-mode .dark-mode-button:hover {
@@ -517,7 +520,6 @@ body.dark-mode .dark-mode-button .fa-sun {
 /* Team Section Styles */
 #headingourteam{
   font-size : 35px;
-  font-style: italic;
 }
 .team-section {
   padding: 50px 20px;
@@ -701,7 +703,6 @@ ul li a:hover {
  
 #headingourprogram{
   font-size : 40px;
-  font-style: italic;
 }
 .suggestion a {
   color: rgb(0, 0, 0);
@@ -766,10 +767,12 @@ ul li a:hover {
 
 .program-info {
   text-align: center;
+  background-color: #d9e0ff;
 }
 
 .program-info h3 {
   margin: 15px 0 10px;
+  background-color: #d9e0ff;
 }
 
 .program-info p {
