@@ -67,23 +67,6 @@ nav {
   color: #fff;
   border-radius: 5px;
 }
-
-/* .search-bar {
-  width: 220px;
-  padding: 10px 10px 10px 22px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.search-icon {
-  height: 18px;
-  width: 22px;
-  fill: #333;
-  position: absolute;
-  top: 13px;
-  left: 2px;
-} */
-
 .search-bar {
   width: 100%;
   max-width: 270px;
@@ -114,6 +97,10 @@ nav {
   font-size: 1.5rem;
   color:  rgba(37, 49, 55, 0.676);
 }
+
+
+
+
 
 
 /* Dropdown styles */
