@@ -525,17 +525,19 @@ body.dark-mode .dark-mode-button .fa-sun {
 }
 
 .team-card {
-  background-color: rgb(241, 223, 223);
-  color: #000000;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  flex: 1;
-  min-width: 280px;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+    background-color: rgb(147, 173, 243);
+    color:#000000 ;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .team-photo {
@@ -725,16 +727,18 @@ ul li a:hover {
 }
 
 .program-card {
-  background: #d9e0ff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  flex: 1;
-  min-width: 280px;
-  max-width: 350px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+
+    background: #053a62;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+
 }
 
 .program-photo {
