@@ -13,6 +13,7 @@
     />
 
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/contributors.css" />
   </head>
 
   <body>
@@ -26,21 +27,39 @@
           <a href="index.html" class="logo-link">
             <img class="logo" src="./public/ocdlogo.png" alt="OCD Logo" />
           </a>
-          <div class="nav-text"><a href="./html/events.html">Events</a></div>
+          <div class="nav-text"><a href="#">Home</a></div>
           <div class="nav-text"><a href="./html/about.html">About</a></div>
-
+          <div class="nav-text"><a href="./html/events.html">Events</a></div>
           <div class="nav-text">
-            <a href="./html/achievements.html">Achievements</a>
+            <a href="./html/Resources.html">Resources</a>
           </div>
-          <div class="nav-text">
-            <a href="./html/contactUs.html">Contact Us</a>
+          <div class="nav-text dropdown">
+            <a href="./html/contactUs.html">Links</a>
+            <div class="dropdown-content">
+              <a href="./html/contributors.html">Contributors</a>
+              <a href="./html/contests.html">Contest</a>
+              <a href="./html/blog.html">Blogs</a>
+              <a href="./html/achievements.html">Achievements</a>
+              <a href="./html/contactUs.html">Contact Us</a>
+            </div>
           </div>
         </div>
         <div class="nav-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            class="search-icon"
+          >
+            <path
+              d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+            />
+          </svg>
           <input type="text" placeholder="Search" class="search-bar" />
           <button id="dark-mode-toggle" class="dark-mode-button">
-            <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
-            <i class="fas fa-moon"></i> <!-- Moon icon for dark mode -->
+            <i class="fas fa-sun"></i>
+            <!-- Sun icon for light mode -->
+            <i class="fas fa-moon"></i>
+            <!-- Moon icon for dark mode -->
           </button>
         </div>
       </div>
@@ -56,8 +75,10 @@
         We are currently working on DSA, Competitive Programming, and a 30 Days
         Java challenge. Join us and enhance your coding skills!
       </p>
-      <!-- button for linking login page -->
-      <a href="#"><button id="join-btn-popup">Join</button></a>
+      button for linking login page
+      <a href="./html/join_30DayOfJs.html"
+        ><button id="join-btn-popup">Join</button></a
+      >
     </div>
     <!-- Pop-up Section end  -->
 
@@ -86,40 +107,75 @@
       </div>
     </section>
     <!-- Programs Section Start -->
-   <section class="programs-section">
-    <div class="programs-container">
+    <section class="programs-section">
+      <div class="programs-container">
         <h1>Our Programs</h1>
         <div class="programs-cards">
-            <div class="program-card">
-                <img src="https://miro.medium.com/v2/resize:fit:1400/0*7AHKqhGVaDWZJ1L_.png" alt="DSA Program" class="program-photo" />
-                <div class="program-info">
-                    <h3>DSA</h3>
-                    <p>Explore Data Structures and Algorithms through hands-on challenges and tutorials.</p>
-                    <a href="https://demo-link-for-dsa.com" target="_blank" class="view-demo">View Demo</a>
-                </div>
+          <div class="program-card">
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1400/0*7AHKqhGVaDWZJ1L_.png"
+              alt="DSA Program"
+              class="program-photo"
+            />
+            <div class="program-info">
+              <h3>DSA</h3>
+              <p>
+                Explore Data Structures and Algorithms through hands-on
+                challenges and tutorials.
+              </p>
+              <a
+                href="https://demo-link-for-dsa.com"
+                target="_blank"
+                class="view-demo"
+                >Learn More!</a
+              >
             </div>
-            <div class="program-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA1_b_iR2A79YQxvGPmafMwXPIlF4DbXYTfg&s" alt="Competitive Programming" class="program-photo" />
-                <div class="program-info">
-                    <h3>Competitive Programming</h3>
-                    <p>Enhance your problem-solving skills with competitive programming contests.</p>
-                    <a href="https://demo-link-for-cp.com" target="_blank" class="view-demo">View Demo</a>
-                </div>
+          </div>
+          <div class="program-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA1_b_iR2A79YQxvGPmafMwXPIlF4DbXYTfg&s"
+              alt="Competitive Programming"
+              class="program-photo"
+            />
+            <div class="program-info">
+              <h3>Competitive Programming</h3>
+              <p>
+                Enhance your problem-solving skills with competitive programming
+                contests.
+              </p>
+              <a
+                href="https://demo-link-for-cp.com"
+                target="_blank"
+                class="view-demo"
+                >Learn More!</a
+              >
             </div>
-            <div class="program-card">
-                <img src="https://miro.medium.com/v2/resize:fit:1080/1*WYyR2kc3ZclKQdnsQJd6AA.png" alt="30 Days of JavaScript" class="program-photo" />
-                <div class="program-info">
-                    <h3>30 Days of JavaScript</h3>
-                    <p>Join our 30-day JavaScript challenge to master the language with daily exercises.</p>
-                    <a href="https://demo-link-for-js.com" target="_blank" class="view-demo">View Demo</a>
-                </div>
+          </div>
+          <div class="program-card">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/027/127/463/large_2x/javascript-logo-javascript-icon-transparent-free-png.png"
+              alt="30 Days of JavaScript"
+              class="program-photo"
+            />
+            <div class="program-info">
+              <h3>30 Days of JavaScript</h3>
+              <p>
+                Join our 30-day JavaScript challenge to master the language with
+                daily exercises.
+              </p>
+              <a
+                href="https://demo-link-for-js.com"
+                target="_blank"
+                class="view-demo"
+                >Learn More!</a
+              >
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Programs Section End -->
-
+    <!-- Programs Section End -->
 
     <!-- Team Section -->
     <section class="team-section">
@@ -261,23 +317,30 @@
           <ul>
             <li><a href="./html/events.html">Events</a></li>
             <li><a href="./html/about.html">About</a></li>
-            <li><a href="./html/achievements.html">Team</a></li>
+            <li><a href="./html/achievements.html">Achievements</a></li>
             <li><a href="./html/contactUs.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-right">
           <h3>Follow Us</h3>
           <div class="social-icons">
-            <a href="https://github.com/Mohak1809/OCD-Website"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Mohak1809/OCD-Website"
+              ><i class="fab fa-github"></i
+            ></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/ocd_nitkkr/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/showcase/opencode-developers-society"><i class="fab fa-linkedin-in"></i></a>
-            
+            <a href="https://www.instagram.com/ocd_nitkkr/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/showcase/opencode-developers-society"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="./js/index.js"></script>
+    <script src="/js/contributors.js"></script>
   </body>
 </html>

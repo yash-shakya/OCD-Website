@@ -1,50 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/style_contri.css" />
-    <script src="file_contri.js"></script>
-  </head>
-  <body>
-    <section id="contributors">
-      <h2>Our Contributors</h2>
-      <div class="contributors-container">
-        <div class="contributor-card">
-          <img
-            src="profile1.jpg"
-            alt="Contributor Name"
-            class="contributor-image"
-          />
-          <h3>Contributor Name</h3>
-          <p class="role">Role: Developer</p>
-          <p class="projects">Contributed to: Project A, Project B</p>
-          <div class="button-group">
-            <a href="#view-profile" class="button">View Profile</a>
-            <a href="#contact" class="button">Contact</a>
-          </div>
-        </div>
-        <!-- Repeat .contributor-card for other contributors -->
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribution</title>
+    <link rel="icon" type="image/x-icon" href="./public/ocdlogo.png" />
 
-      <div class="contributors-container">
-        <div class="contributor-card">
-          <img
-            src="profile1.jpg"
-            alt="Contributor Name"
-            class="contributor-image"
-          />
-          <h3>Contributor Name</h3>
-          <p class="role">Role: Developer</p>
-          <p class="projects">Contributed to: Project A, Project B</p>
-          <div class="button-group">
-            <a href="#view-profile" class="button">View Profile</a>
-            <a href="#contact" class="button">Contact</a>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles/contributors.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav>
+      <div class="nav-content">
+        <button class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-left">
+          <a href="index.html" class="logo-link">
+            <img class="logo" src="../public/ocdlogo.png" alt="OCD Logo" />
+          </a>
+          <div class="nav-text"><a href="index.html">Home</a></div>
+          <div class="nav-text"><a href="./about.html">About</a></div>
+          <div class="nav-text"><a href="./events.html">Events</a></div>
+          <div class="nav-text">
+            <a href="./Resources.html">Resources</a>
+          </div>
+          <div class="nav-text dropdown">
+            <a href="./contactUs.html">Links</a>
+            <div class="dropdown-content">
+              <a href="./contributors.html">Contributors</a>
+              <a href="./contests.html">Contest</a>
+              <a href="./blog.html">Blogs</a>
+              <a href="./achievements.html">Achievements</a>
+              <a href="./contactUs.html">Contact Us</a>
+            </div>
           </div>
         </div>
-        <!-- Repeat .contributor-card for other contributors -->
+        <div class="nav-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            class="search-icon"
+          >
+            <path
+              d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+            />
+          </svg>
+          <input type="text" placeholder="Search" class="search-bar" />
+          <button id="dark-mode-toggle" class="dark-mode-button">
+            <i class="fas fa-sun"></i>
+            <!-- Sun icon for light mode -->
+            <i class="fas fa-moon"></i>
+            <!-- Moon icon for dark mode -->
+          </button>
+        </div>
       </div>
-    </section>
-  </body>
+    </nav>
+  
+    <!-- Contribution Section -->
+  <section class="contribution-section">
+    <div class="container">
+      <h1>Our Top 15 Contributors</h1>
+      <div id="contributors" class="cards-container"></div>
+    </div>
+  </section>
+  
+<!-- Suggestion Box -->
+<div class="suggestion">
+    <a href="../html/feedback.html" class="suggestion-link">Help Us Improve</a>
+  </div>
+
+ <!-- Footer -->
+ <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <a href="index.html" class="footer-logo-link">
+        <img
+          class="footer-logo"
+          src="../public/ocdlogo.png"
+          alt="OCD Logo"
+        />
+      </a>
+      <p>
+        &copy; 2024 Open Code Developers Society, NIT Kurukshetra. 
+      </p>
+      <p>All
+        rights reserved.</p>
+    </div>
+    <div class="footer-center">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/html/events.html">Events</a></li>
+        <li><a href="/html/about.html">About</a></li>
+        <li><a href="/html/achievements.html">Achievements</a></li>
+        <li><a href="/html/contactUs.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://github.com/Mohak1809/OCD-Website"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/ocd_nitkkr/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/showcase/opencode-developers-society"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for social icons -->
+<script
+  src="https://kit.fontawesome.com/a076d05399.js"
+  crossorigin="anonymous"
+></script>
+<script src="/js/index.js"></script>
+<script src="/js/contributors.js"></script>
+
+</body>
 </html>
+

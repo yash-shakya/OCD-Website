@@ -1,19 +1,16 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const choiceModal = document.getElementById('choice-modal');
-    const closeModal = document.querySelector('.modal-content .close');
     const viewResourcesBtn = document.getElementById('view-resources-btn');
     const addResourcesBtn = document.getElementById('add-resources-btn');
-    const resourceLibrary = document.getElementById('resource-library');
+    const resourceLibrarySection = document.getElementById('resource-library');
     const addResourceSection = document.querySelector('.add-resource');
     const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const resourceForm = document.getElementById('resource-form');
     const searchBar = document.getElementById('search-bar');
     const clearButton = document.getElementById('clear-button');
     const resourceContainer = document.getElementById('resource-container');
-    const resourceForm = document.getElementById('resource-form');
 
-    const resources = [
-        // Competitive Programming
+    const existingResources = [
         { title: 'Competitive Programming for Beginners', description: 'A guide to get started with competitive programming.', link: 'https://example.com/competitive-programming' },
         { title: 'Codeforces', description: 'Competitive programming platform for practice.', link: 'https://codeforces.com/' },
         { title: 'TopCoder', description: 'Online programming competitions and practice.', link: 'https://www.topcoder.com/' },
@@ -70,99 +67,80 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: 'Frontend Mentor', description: 'Frontend coding challenges for practice.', link: 'https://www.frontendmentor.io/' },
         { title: 'JavaScript.info', description: 'A comprehensive guide to JavaScript.', link: 'https://javascript.info/' },
         { title: 'CSS-Tricks', description: 'Tips and tricks for CSS and web design.', link: 'https://css-tricks.com/' },
-        { title: 'Smashing Magazine', description: 'Web design and development articles.', link: 'https://www.smashingmagazine.com/' },
-        { title: 'A List Apart', description: 'Web design and development insights.', link: 'https://alistapart.com/' },
-    ];
+        ];
 
+        function renderResources(resources) {
+            const resourceContainer = document.getElementById('resource-container');
+            resourceContainer.innerHTML = '';
+            
+            resources.forEach(resource => {
+                const resourceElement = document.createElement('div');
+                resourceElement.className = 'resource';
+                
+                resourceElement.innerHTML = `
+                    <h3>${resource.title}</h3>
+                    <p>${resource.description}</p>
+                    <a href="${resource.link}" target="_blank">Learn More</a>
+                `;
+                
+                resourceContainer.appendChild(resourceElement);
+            });
+        }
+        
+    renderResources(existingResources);
 
-    function displayResources(resources) {
-        resourceContainer.innerHTML = ''; // Clear existing content
-        resources.forEach(resource => {
-            const resourceDiv = document.createElement('div');
-            resourceDiv.className = 'resource';
-            resourceDiv.innerHTML = `
-                <h3>${resource.title}</h3>
-                <p>${resource.description}</p>
-                <a href="${resource.link}" target="_blank">Read more</a>
-            `;
-            resourceContainer.appendChild(resourceDiv);
-        });
-    }
-
-    function filterResources(query) {
-        return resources.filter(resource => 
-            resource.title.toLowerCase().includes(query.toLowerCase()) ||
-            resource.description.toLowerCase().includes(query.toLowerCase())
-        );
-    }
-
-    // Apply saved dark mode preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-        document.querySelectorAll('nav, .footer, .resource-library').forEach(el => el.classList.add('dark-mode'));
-        darkModeToggle.classList.add('dark-mode');
-    }
-
-    // Show choice modal on page load
-    choiceModal.style.display = 'flex';
-
-    // Close modal
-    closeModal.addEventListener('click', () => {
-        choiceModal.style.display = 'none';
-    });
-
-    // Show Resource Library section
     viewResourcesBtn.addEventListener('click', () => {
-        resourceLibrary.classList.remove('hidden');
+        choiceModal.style.display = 'none';
+        resourceLibrarySection.classList.remove('hidden');
         addResourceSection.classList.add('hidden');
-        displayResources(resources); // Load resources on view
-        choiceModal.style.display = 'none';
     });
 
-    // Show Add Resource section
     addResourcesBtn.addEventListener('click', () => {
-        resourceLibrary.classList.add('hidden');
-        addResourceSection.classList.remove('hidden');
         choiceModal.style.display = 'none';
+        resourceLibrarySection.classList.add('hidden');
+        addResourceSection.classList.remove('hidden');
     });
 
-    // Search functionality
-    searchBar.addEventListener('input', (event) => {
-        const query = event.target.value;
-        const filteredResources = filterResources(query);
-        displayResources(filteredResources);
+    resourceForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const title = document.getElementById('title').value;
+        const description = document.getElementById('description').value;
+        const link = document.getElementById('link').value;
+
+        const newResource = { title, description, link };
+        existingResources.push(newResource);
+        renderResources(existingResources);
+
+        document.getElementById('title').value = '';
+        document.getElementById('description').value = '';
+        document.getElementById('link').value = '';
+        alert('Resource added successfully!');
     });
 
-    // Clear search input
     clearButton.addEventListener('click', () => {
         searchBar.value = '';
-        displayResources(resources);
+        renderResources(existingResources);
     });
 
-    // Handle resource form submission
-    resourceForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const title = event.target.title.value;
-        const description = event.target.description.value;
-        const link = event.target.link.value;
-
-        // Add new resource to the array and display
-        resources.push({ title, description, link });
-        displayResources(resources);
-
-        // Clear form and switch to view resources
-        resourceForm.reset();
-        resourceLibrary.classList.remove('hidden');
-        addResourceSection.classList.add('hidden');
+    searchBar.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredResources = existingResources.filter(resource =>
+            resource.title.toLowerCase().includes(searchTerm) ||
+            resource.description.toLowerCase().includes(searchTerm)
+        );
+        renderResources(filteredResources);
     });
 
-    // Dark mode toggle
-    darkModeToggle.addEventListener('click', () => {
-        const darkModeEnabled = document.body.classList.toggle('dark-mode');
-        document.querySelectorAll('nav, .footer, .resource-library').forEach(el => el.classList.toggle('dark-mode', darkModeEnabled));
-        darkModeToggle.classList.toggle('dark-mode', darkModeEnabled);
+    const toggleDarkMode = () => {
+        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+    };
 
-        // Save dark mode preference
-        localStorage.setItem('dark-mode', darkModeEnabled ? 'enabled' : 'disabled');
-    });
+    const currentMode = localStorage.getItem('darkMode');
+    if (currentMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', toggleDarkMode);
 });
