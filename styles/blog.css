@@ -132,6 +132,10 @@ body.dark-mode .dark-mode-button:hover {
     color: #000;
 }
 
+body.dark-mode .nav-text a{
+    color: #ffffff;
+}
+
 /* Hide moon icon by default (assuming light mode is default) */
 .dark-mode-button .fa-moon {
     display: none;
