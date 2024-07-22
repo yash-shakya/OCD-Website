@@ -295,6 +295,7 @@ body.dark-mode .dark-mode-button .fa-sun {
   margin-top: 0.9rem;
    height: 6vh;
   width: 8vw; */
+  
   transition: all 0.3s ease;
   background-color: #0004ec;
   color: rgb(249, 249, 249);
