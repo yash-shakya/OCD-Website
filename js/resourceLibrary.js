@@ -143,4 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     darkModeToggle.addEventListener('click', toggleDarkMode);
+    // nav toggle for smaller screen
+    const navToggle = document.getElementById('nav-toggle');
+    const navLeft = document.querySelector('.nav-left');
+    const navRight = document.querySelector('.nav-right');
+    if (!navToggle) {
+        console.error('Navbar toggle button not found');
+        return;
+    }
+    navToggle.addEventListener('click', () => {
+      navLeft.classList.toggle('active');
+      navRight.classList.toggle('active');
+    });
 });
