@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#error-message {
+    color: red;
+    margin-top: 15px;
+}
+.SignUp-redirect {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.SignUp-redirect p {
+    color: #777;
+}
+
+.SignUp-redirect {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.SignUp-redirect a:hover {
+    text-decoration: underline;
+}
+
+.suggestion {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #1206eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.suggestion a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* ADD THESE NEW STYLES */
+/* Ensure dark mode affects all major sections */
+body.dark-mode .content,
+body.dark-mode nav{
+    background-color: #333; /* Slightly lighter than body for contrast */
+    color: #ffffff;
+}
+
+/* Adjust text color for better visibility in dark mode */
+body.dark-mode .nav-text a{
+    color: #ffffff;
+}
+
+body.dark-mode .dark-mode-button {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Adjust button hover state in dark mode */
+body.dark-mode .dark-mode-button:hover {
+    background-color: #09fd56;
+    color: #000;
+}
+
+/* Hide moon icon by default (assuming light mode is default) */
+.dark-mode-button .fa-moon {
+    display: none;
+  }
+  
+  /* Show moon icon and hide sun icon in dark mode */
+  body.dark-mode .dark-mode-button .fa-moon {
+    display: inline-block;
+  }
+  
+  body.dark-mode .dark-mode-button .fa-sun {
+    display: none;
+}
+
+/* Dark mode changes end here */
+
