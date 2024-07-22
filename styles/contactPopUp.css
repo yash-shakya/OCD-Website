@@ -6,7 +6,7 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
     background-color: rgba(101, 98, 98, 0.8);
     display: flex;
     justify-content: center;
@@ -32,6 +32,10 @@
     text-align: center;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#popup-message{
+    margin: 5px;
+    font-size: large;
 }
 #close-popup {
     background-color: #2a09fd; /* Bright green for visibility */

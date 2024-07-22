@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/ContactUs.css" />
+    <link rel="stylesheet" href="../styles/contactPopUp.css" />
    
     <!-- Font Awesome -->
 
@@ -68,6 +69,13 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
+      <!-- pop up section -->
+      <div id="popup" class="popup-hidden">
+        <div class="popup-content">
+          <p id="popup-message"></p>
+          <button id="close-popup">Close</button>
+        </div>
+      </div>
       <header>
         <div class="header-container">
           <h1>Contact Us</h1>
@@ -79,7 +87,7 @@
       </header>
 
       <div class="container">
-        <form class="contact-form" action="submit-form.php" method="post">
+        <form class="contact-form" id="contact-form" action="submit-form.php" method="post">
           <label for="name" class="labels">Name:</label>
           <input type="text" id="name" name="name" required />
 
@@ -149,6 +157,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/contactUs_authentication.js"></script>
+    <script src="../js/contactSubmittionPopUp.js"></script>
     <script src="../js/index.js"></script>
   </body>
 </html>
