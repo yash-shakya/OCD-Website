@@ -5,10 +5,15 @@
   box-sizing: border-box;
   
 }
-
+#herosectionheading{
+  font-size: 45px;
+  color: #0077b6;
+  font-style: italic;
+  font-weight: bold;
+}
 /* Navbar Styles */
 nav {
-  background-color: #d7fdf0;
+  background-color: #9dade0;
   padding: 10px 20px;
   position: fixed;
   width: 100%;
@@ -19,7 +24,6 @@ nav {
   font-size: 1.25rem;
   margin-bottom: 30px;
 
-  
 }
 
 .nav-content {
@@ -34,6 +38,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 20px;
+  font-size: 30px;
 }
 
 .nav-right {
@@ -151,7 +156,7 @@ nav {
 }
 
 .dark-mode-button:hover {
-    background-color: #09fd56;
+    background-color: hsl(54, 98%, 51%);
     color: #000;
 }
 
@@ -218,7 +223,7 @@ body.dark-mode .programs-section h3 {
 }
 
 body.dark-mode .dark-mode-button:hover {
-    background-color: #09fd56;
+    background-color: hsl(56, 98%, 51%);
     color: #000;
 }
 
@@ -263,17 +268,17 @@ body.dark-mode .dark-mode-button .fa-sun {
   font-family: "Kalnia Glaze", serif;
   display: none;
   position: fixed;
-  top: 15%;
-  right: 3vw;
-  width: 250px;
+  top: 20%;
+  right: 2vw;
+  width: 240px;
   height: 320px;
   overflow-y: hidden;
   text-align: center;
-  padding: 1.7rem;
+  padding: 1.0rem;
   z-index: 1000;
   transition: all 0.3s ease-out;
   animation: fadeIn 1.7s ease-in;
-  background-color: #4321a0;
+  background-color: #0096c7;
   color: #ffffff;
   border-radius: 2rem;
   word-wrap: break-word;
@@ -297,7 +302,7 @@ body.dark-mode .dark-mode-button .fa-sun {
 }
 
 #close-btn-popup:hover {
-  color: rgb(199, 248, 4);
+  color: rgb(255, 255, 255);
   font-weight: 900;
   font-size: 20px;
   transform: scale(1.4);
@@ -311,8 +316,8 @@ body.dark-mode .dark-mode-button .fa-sun {
   height: 6vh;
   width: 8vw;
   transition: all 0.5s ease;
-  background-color: #0004ec;
-  color: rgb(249, 249, 249);
+  background-color: #03045e;
+  color: rgb(255, 253, 253);
   border-radius: 1rem;
   font-weight: bold;
   border-color: #ffffff;
@@ -457,6 +462,8 @@ body.dark-mode .dark-mode-button .fa-sun {
   flex: 1;
   max-width: 100%;
   margin-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .hero-images {
@@ -483,6 +490,10 @@ body.dark-mode .dark-mode-button .fa-sun {
 }
 
 /* Team Section Styles */
+#headingourteam{
+  font-size : 35px;
+  font-style: italic;
+}
 .team-section {
   padding: 50px 20px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -644,7 +655,7 @@ ul li a:hover {
   bottom: 80px;
   width: 80px;
   height: 80px;
-  background-color: #eba306;
+  background-color: #f5e025;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -663,9 +674,12 @@ ul li a:hover {
   }
 
  
-
+#headingourprogram{
+  font-size : 40px;
+  font-style: italic;
+}
 .suggestion a {
-  color: rgb(81, 71, 71);
+  color: rgb(0, 0, 0);
   font-weight: 800;
   text-decoration: none;
 }
@@ -705,7 +719,7 @@ ul li a:hover {
 }
 
 .program-card {
-  background: #ffffff;
+  background: #d9e0ff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -742,7 +756,7 @@ ul li a:hover {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #2953a6;
+  background-color: #072e7c;
   color: #000;
   text-decoration: none;
   border-radius: 5px;
