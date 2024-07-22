@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const choiceModal = document.getElementById('choice-modal');
-    const closeModal = document.querySelector('.modal-content .close');
     const viewResourcesBtn = document.getElementById('view-resources-btn');
     const addResourcesBtn = document.getElementById('add-resources-btn');
     const resourceLibrarySection = document.getElementById('resource-library');
@@ -68,101 +67,80 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: 'Frontend Mentor', description: 'Frontend coding challenges for practice.', link: 'https://www.frontendmentor.io/' },
         { title: 'JavaScript.info', description: 'A comprehensive guide to JavaScript.', link: 'https://javascript.info/' },
         { title: 'CSS-Tricks', description: 'Tips and tricks for CSS and web design.', link: 'https://css-tricks.com/' },
-        { title: 'Smashing Magazine', description: 'Web design and development articles.', link: 'https://www.smashingmagazine.com/' },
-        { title: 'A List Apart', description: 'Web design and development insights.', link: 'https://alistapart.com/' },
-    ];
-        // Add more resources as neede
+        ];
 
-    const showModal = () => {
-        choiceModal.style.display = 'flex';
-    };
-
-    const closeModalFunc = () => {
-        choiceModal.style.display = 'none';
-    };
-
-    closeModal.addEventListener('click', closeModalFunc);
-
-    window.addEventListener('click', (event) => {
-        if (event.target === choiceModal) {
-            closeModalFunc();
+        function renderResources(resources) {
+            const resourceContainer = document.getElementById('resource-container');
+            resourceContainer.innerHTML = '';
+            
+            resources.forEach(resource => {
+                const resourceElement = document.createElement('div');
+                resourceElement.className = 'resource';
+                
+                resourceElement.innerHTML = `
+                    <h3>${resource.title}</h3>
+                    <p>${resource.description}</p>
+                    <a href="${resource.link}" target="_blank">Learn More</a>
+                `;
+                
+                resourceContainer.appendChild(resourceElement);
+            });
         }
-    });
+        
+    renderResources(existingResources);
 
     viewResourcesBtn.addEventListener('click', () => {
-        closeModalFunc();
+        choiceModal.style.display = 'none';
         resourceLibrarySection.classList.remove('hidden');
         addResourceSection.classList.add('hidden');
     });
 
     addResourcesBtn.addEventListener('click', () => {
-        closeModalFunc();
-        addResourceSection.classList.remove('hidden');
+        choiceModal.style.display = 'none';
         resourceLibrarySection.classList.add('hidden');
+        addResourceSection.classList.remove('hidden');
     });
 
-    darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-    });
-
-    resourceForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-
+    resourceForm.addEventListener('submit', (e) => {
+        e.preventDefault();
         const title = document.getElementById('title').value;
         const description = document.getElementById('description').value;
         const link = document.getElementById('link').value;
 
-        const resource = {
-            title,
-            description,
-            link
-        };
+        const newResource = { title, description, link };
+        existingResources.push(newResource);
+        renderResources(existingResources);
 
-        addResource(resource);
-        resourceForm.reset();
+        document.getElementById('title').value = '';
+        document.getElementById('description').value = '';
+        document.getElementById('link').value = '';
+        alert('Resource added successfully!');
     });
-
-    const addResource = (resource) => {
-        const resourceElement = document.createElement('div');
-        resourceElement.className = 'resource';
-
-        resourceElement.innerHTML = `
-            <h3>${resource.title}</h3>
-            <p>${resource.description}</p>
-            <a href="${resource.link}" target="_blank">Visit</a>
-        `;
-
-        resourceContainer.appendChild(resourceElement);
-    };
-
-    const initializeResources = () => {
-        existingResources.forEach(resource => {
-            addResource(resource);
-        });
-    };
 
     clearButton.addEventListener('click', () => {
         searchBar.value = '';
-        filterResources('');
+        renderResources(existingResources);
     });
 
-    searchBar.addEventListener('input', (event) => {
-        filterResources(event.target.value);
+    searchBar.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredResources = existingResources.filter(resource =>
+            resource.title.toLowerCase().includes(searchTerm) ||
+            resource.description.toLowerCase().includes(searchTerm)
+        );
+        renderResources(filteredResources);
     });
 
-    const filterResources = (searchText) => {
-        const resources = document.querySelectorAll('.resource');
-        resources.forEach((resource) => {
-            const title = resource.querySelector('h3').textContent.toLowerCase();
-            const description = resource.querySelector('p').textContent.toLowerCase();
-            if (title.includes(searchText.toLowerCase()) || description.includes(searchText.toLowerCase())) {
-                resource.style.display = '';
-            } else {
-                resource.style.display = 'none';
-            }
-        });
+    const toggleDarkMode = () => {
+        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
     };
 
-    initializeResources();
-    showModal();
+    const currentMode = localStorage.getItem('darkMode');
+    if (currentMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', toggleDarkMode);
 });

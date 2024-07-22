@@ -4,28 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCD-30DaysOfJs</title>
+    <link rel="icon" type="image/x-icon" href="./public/ocdlogo.png" />
 
     <link rel="stylesheet" href="../styles/30DayOfJs.css">
-
+      <link rel="stylesheet" href="/styles/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
-    <!-- header section  -->
-    <header>
-        <nav>
-            <div class="js-icon">
-                <img src="../public/js.svg" alt="JS" width="50px">
+
+     <!-- Navbar -->
+     <nav>
+      <div class="nav-content">
+        <button class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-left">
+          <a href="index.html" class="logo-link">
+            <img class="logo" src="../public/ocdlogo.png" alt="OCD Logo" />
+          </a>
+          <div class="nav-text"><a href="index.html">Home</a></div>
+          <div class="nav-text"><a href="./html/about.html">About</a></div>
+          <div class="nav-text"><a href="./html/events.html">Events</a></div>
+          <div class="nav-text">
+            <a href="./html/Resources.html">Resources</a>
+          </div>
+          <div class="nav-text dropdown">
+            <a href="./html/contactUs.html">Links</a>
+            <div class="dropdown-content">
+              <a href="./html/contributors.html">Contributors</a>
+              <a href="./html/contest.html">Contest</a>
+              <a href="./html/blog.html">Blogs</a>
+              <a href="./html/achievements.html">Achievements</a>
+              <a href="./html/contactUs.html">Contact Us</a>
             </div>
-            <div class="heading">
-                <h1>30 DAYS OF JAVASCRIPT</h1>
-            </div>
-        </nav>
-    </header>
+          </div>
+        </div>
+        <div class="nav-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            class="search-icon"
+          >
+            <path
+              d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+            />
+          </svg>
+          <input type="text" placeholder="Search" class="search-bar" />
+          <button id="dark-mode-toggle" class="dark-mode-button">
+            <i class="fas fa-sun"></i>
+            <!-- Sun icon for light mode -->
+            <i class="fas fa-moon"></i>
+            <!-- Moon icon for dark mode -->
+          </button>
+        </div>
+      </div>
+    </nav>
+    
 
     <!-- hero section  -->
+
     <div class="hero-section">
+        <div>
+            
+            <div class="heading">
+                <h1>30 DAYS OF JAVASCRIPT
+                    <img src="../public/js.svg" alt="JS" width="30px">
+                </h1>
+            </div>
+        </div>
         <div class="overview">
             <h1>Overview</h1>
             <p>
@@ -41,7 +89,7 @@
                 <b>- Project Development:</b> Build real-world projects including a Weather App, E-commerce Website, Social Media Dashboard, and Chat Application.
             </p>
         </div>
-    </div>
+    
 
     <!-- main section  -->
      <main>
@@ -68,8 +116,46 @@
             <div class="image">
                 <img src="../public/whatsapp.svg" alt="Whatsapp-Group" width="70px">
             </div>
-            <p>Join whtsapp chat</p>
+            <p>Click to Join Now!</p>
         </a>
     </div>
+    </div>
+
+      <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <a href="index.html" class="footer-logo-link">
+              <img
+                class="footer-logo"
+                src="../public/ocdlogo.png"
+                alt="OCD Logo"
+              />
+            </a>
+            <p>&copy; 2024 Open Code Developers Society, NIT Kurukshetra.</p>
+            <p>All rights reserved.</p>
+          </div>
+          <div class="footer-center">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./html/events.html">Events</a></li>
+              <li><a href="./html/about.html">About</a></li>
+              <li><a href="./html/achievements.html">Achievements</a></li>
+              <li><a href="./html/contactUs.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://github.com/Mohak1809/OCD-Website"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/ocd_nitkkr/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/showcase/opencode-developers-society"><i class="fab fa-linkedin-in"></i></a>
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="/js/index.js"></script>
 </body>
 </html>

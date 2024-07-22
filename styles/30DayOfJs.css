@@ -1,120 +1,189 @@
-*{
-    margin: 0;
-    padding: 0;
-
-}
-body{
-    background-color: #222f3d;
-    color: white;
-}
-header{
-    background-color: #131A22;
-    padding: 10px;
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-nav{
-    display: flex;
-    justify-content: left;
-}
-nav .heading{
-    margin-left: 20px;
-    margin-top: 5px;
-}
-nav h1{
-    font-size: 2.5rem;
-    color:rgb(255, 212, 59);
+.heading {
+  color: #ffae00;
 }
 
 /* hero  */
-.hero-section{
-    background-color: #222f3d;
-    height: auto;
 
-    padding: 20px 100px;
+.hero-section h1 {
+  text-align: center;
+}
 
-    border-bottom: 2px solid rgba(255, 255, 255, 0.288);
+.hero-section p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.637);
 }
-.hero-section h1{
-    text-align: center;
+.hero-section .learning {
+  margin-top: 10px;
 }
-.hero-section p{
-    font-size: 1.2rem;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.637);
+
+.overview {
+  text-align: center;
 }
-.hero-section .learning{
-    margin-top: 10px;
+
+.learning p b{
+    color:#000;
 }
 
 /* main  */
-main{
-    width: 700px;
-    padding: 20px;
-    background-color: #131A22;
+main {
+  width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
 
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 100px;
 }
 
 main h2 {
-    margin-bottom: 20px;
-    color:white;
-    text-align: center;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.686);
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.686);
 }
 
 .form-group input,
 .form-group textarea {
-    background-color: rgba(255, 255, 255, 0.772);
-    width: 100%;
-    padding: 10px;
-    border:none;
-    border-radius: 4px;
-    box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.772);
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #000;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border:3px solid orange;
-    outline: none;
+  border: 3px solid orange;
+  outline: none;
 }
 
 button {
-    background-color: #007bff;
-    color: rgba(255, 255, 255, 0.812);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #007bff;
+  color: rgba(0, 0, 0, 0.812);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* whatsapp */
-.whatsapp-group{
-    width: 70px;
-    position: fixed;
-    bottom: 10vh;
-    right: 10px;
+.whatsapp-group {
+  width: 90px;
+  position: fixed;
+  bottom: 5vh;
+  right: 10px;
 }
-.whatsapp-group p{
-    text-align: center;
-    color: white;
+.whatsapp-group p {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+
+.dark-mode-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-mode-button:hover {
+    background-color: #09fd56;
+    color: #000;
+}
+
+/* Light Mode Styles */
+body.light-mode  {
+    color: #000000; 
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #222; 
+    color: #ffffff; 
+}
+
+body.dark-mode .hero-section,
+body.dark-mode nav,
+body.dark-mode .team-section,
+body.dark-mode .programs-section {
+    background-color: #333;
+   
+}
+
+
+body.dark-mode nav a,
+body.dark-mode .overview p,
+body.dark-mode .learning p,
+body.dark-mode .learning b,
+body.dark-mode .whatsapp-group p{
+    color: #ffffff;
+   
+}
+body.dark-mode nav a:hover{
+    background-color: #000000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+
+body.dark-mode .nav-toggle i {
+    color: #ffffff;
+}
+
+
+
+body.dark-mode .dark-mode-button:hover {
+    background-color: #09fd56;
+    color: #000;
+}
+
+/* Hide moon icon by default (assuming light mode is default) */
+.dark-mode-button .fa-moon {
+    display: none;
+}
+  
+/* Show moon icon and hide sun icon in dark mode */
+body.dark-mode .dark-mode-button .fa-moon {
+    display: inline-block;
+}
+  
+body.dark-mode .dark-mode-button .fa-sun {
+    display: none;
 }
