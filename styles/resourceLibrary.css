@@ -1,46 +1,6 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 .main-content {
-    flex: 1;
-}
-
-/* Navbar styles */
-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-#dark-mode-toggle {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
+    min-height: 490px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Modal styles */
@@ -49,20 +9,39 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
+    height: 90%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    position: relative;
-    max-width: 500px;
-    width: 90%;
+.modal h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.resources-box{
+    display:flex;
+    gap:10px;
+}
+#view-resources-btn,
+#add-resources-btn {
+   
+    margin-left: 80px;
+    padding: 15px;
+    border:none;
+    outline:none;
+    color: black;
+    font-weight: 600;
+    cursor:pointer;
+    border-radius: 12px;
+    background-color: rgba(171, 219, 202, 0.8);
+}
+
+#view-resources-btn:hover,
+#add-resources-btn:hover {
+    color: #fff;
+    background-color: rgb(126, 165, 151);
+    box-shadow: 5px 8px 5px rgba(128, 128, 128,0.5);
 }
 
 .close {
@@ -94,26 +73,45 @@ nav a:hover {
 }
 
 #clear-button {
-    padding: 10px;
+    padding: 11px;
     margin-left: 10px;
-    border: 1px solid #333;
+    border:none;
+    outline:none;
+    color: black;
+    font-weight: 600;
+    cursor:pointer;
     border-radius: 5px;
-    cursor: pointer;
+    background-color: rgba(171, 219, 202, 0.8);
 }
 
 #clear-button:hover {
-    background-color: #333;
+    background-color: rgb(126, 165, 151);
     color: #fff;
+    box-shadow: 0px 4px 7px rgba(128, 128, 128,0.5);
 }
 
 /* Resource Container styles */
+
+.resource-library{
+    margin-top: 120px ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.resource-library h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
 #resource-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+    grid-auto-rows: minmax(150px, auto);
+    
 }
 
 .resource {
+
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -122,6 +120,7 @@ nav a:hover {
     transition: transform 0.2s, box-shadow 0.2s;
     overflow: hidden;
     position: relative;
+   
 }
 
 .resource h3 {
@@ -132,6 +131,8 @@ nav a:hover {
 
 .resource p {
     color: #666;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .resource a {
@@ -143,10 +144,11 @@ nav a:hover {
 
 .resource a:hover {
     text-decoration: underline;
+    color: #000;
 }
 
 .resource:hover {
-    transform: translateY(-5px);
+   
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -158,93 +160,70 @@ nav a:hover {
     width: 100%;
     height: 5px;
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    transition: height 0.2s;
 }
 
-.resource:hover::before {
-    height: 100%;
-    opacity: 0.1;
+/* Add Resource Form styles */
+
+.label{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
 }
 
-/* Add Resource Section styles */
 .add-resource {
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+    
+}
+.add-resource h1{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;  
+    font-style: italic;
+    color: #ff6600;
+    margin-bottom: 30px;
 }
 
 .add-resource form {
     display: flex;
     flex-direction: column;
+    align-items: center; 
 }
 
-.add-resource label {
-    margin: 10px 0 5px;
-}
-
-.add-resource input, 
+.add-resource input,
 .add-resource textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
-    margin-bottom: 10px;
+    width: 400px;
 }
-
+.label textarea{
+    width: 350px;
+}
 .add-resource button {
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 11px;
+    border:none;
+    outline:none;
+    color: black;
+    font-weight: 600;
+    cursor:pointer;
+    border-radius: 8px;
+    background-color: rgba(171, 219, 202, 0.8);
     transition: background-color 0.2s;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .add-resource button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer styles */
-.footer {
-    background-color: #333;
+    background-color: rgb(126, 165, 151);
     color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
+    box-shadow: 0px 4px 7px rgba(128, 128, 128,0.5);
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
-.footer-left, 
-.footer-center, 
-.footer-right {
-    flex: 1;
-    margin: 10px;
-}
 
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.social-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 5px 0;
-}
-
-.social-link:hover {
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
-}

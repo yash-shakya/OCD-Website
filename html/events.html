@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upcoming Events - Open Code Developers (OCD)</title>
     <link rel="icon" type="image/x-icon" href="../public/ocdlogo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../styles/events.css" />
+   
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -15,27 +20,44 @@
 </head>
 <body>
 
- <!-- Navbar -->
- <nav>
+  <!-- Navbar -->
+  <nav>
     <div class="nav-content">
       <button class="nav-toggle" id="nav-toggle">
         <i class="fas fa-bars"></i>
       </button>
       <div class="nav-left">
-        <a href="../index.html" class="logo-link">
+        <a href="..\index.html" class="logo-link">
           <img class="logo" src="../public/ocdlogo.png" alt="OCD Logo" />
         </a>
-        <div class="nav-text"><a href="../html/events.html">Events</a></div>
-        <div class="nav-text"><a href="../html/about.html">About</a></div>
-        <div class="nav-text"><a href="../html/Resources.html">Resources</a></div>
-        <div class="nav-text"><a href="../html/achievements.html">Achievements</a></div>
-        <div class="nav-text"><a href="../html/contactUs.html">Contact Us</a></div>
+        <div class="nav-text"><a href="..\index.html">Home</a></div>
+        <div class="nav-text"><a href="about.html">About</a></div>
+        <div class="nav-text"><a href="events.html">Events</a></div>
+        <div class="nav-text">
+          <a href="Resources.html">Resources</a>
+        </div>
+        <div class="nav-text dropdown">
+          <a href="contactUs.html">Links</a>
+          <div class="dropdown-content">
+              <a href="contributors.html">Contributors</a>
+              <a href="contests.html">Contest</a>
+              <a href="blog.html">Blogs</a>
+              <a href="achievements.html">Achievements</a>
+              <a href="contactUs.html">Contact Us</a>
+          </div>
+        </div>
       </div>
       <div class="nav-right">
-        <input type="text" placeholder="Search" class="search-bar" />
+       
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <span><i class="ri-search-line"></i></span>
+        </div>
         <button id="dark-mode-toggle" class="dark-mode-button">
-          <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
-          <i class="fas fa-moon"></i> <!-- Moon icon for dark mode -->
+          <i class="fas fa-sun"></i>
+          <!-- Sun icon for light mode -->
+          <i class="fas fa-moon"></i>
+          <!-- Moon icon for dark mode -->
         </button>
       </div>
     </div>
@@ -103,14 +125,14 @@
 
    <!-- Suggestion Box -->
    <div class="suggestion">
-    <a href="../html/feedback.html" class="suggestion-link">Help Us Improve</a>
+    <a href="feedback.html" class="suggestion-link">Help Us Improve</a>
   </div>
 
  <!-- Footer -->
  <footer>
   <div class="footer-container">
     <div class="footer-left">
-      <a href="index.html" class="footer-logo-link">
+      <a href="..\index.html" class="footer-logo-link">
         <img
           class="footer-logo"
           src="../public/ocdlogo.png"
@@ -127,9 +149,9 @@
       <h3>Quick Links</h3>
       <ul>
         <li><a href="#">Events</a></li>
-        <li><a href="/html/about.html">About</a></li>
-        <li><a href="/html/achievements.html">Achievements</a></li>
-        <li><a href="/html/contactUs.html">Contact Us</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
       </ul>
     </div>
     <div class="footer-right">
