@@ -73,6 +73,17 @@ nav {
   color: #fff;
   border-radius: 5px;
 }
+
+.nav-text a:visited {
+  color: #333; 
+}
+
+.nav-text a.active {
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
+
 .search-bar {
   width: 100%;
   max-width: 270px;
