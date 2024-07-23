@@ -64,14 +64,31 @@
 
 #search-bar {
     padding: 10px;
-    width: calc(100% - 90px);
+    width: calc(85% - 180px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#search-category {
+    padding: 10px;
+    width: calc(25% - 180px);
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-#clear-button {
+#search-button {
     padding: 11px;
     margin-left: 10px;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(171, 219, 202, 0.8);
+}
+#clear-button {
+    padding: 11px;
+    margin-left: 2px;
     border: none;
     outline: none;
     color: black;

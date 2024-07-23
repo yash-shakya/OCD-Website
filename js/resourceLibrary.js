@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const addResourceSection = document.querySelector(".add-resource");
     const resourceForm = document.getElementById("resource-form");
     const resourceContainer = document.getElementById("resource-container");
+    const search_btn=document.getElementById("search-button");
+    const clear_btn=document.getElementById("clear-button");
 
     const resources = JSON.parse(localStorage.getItem("resources")) || [];
 
@@ -21,6 +23,30 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             resourceContainer.appendChild(resourceDiv);
         });
+    }
+
+    function searchResources(){
+        resourceContainer.innerHTML = "";
+        const searchText = document.getElementById("search-bar").value;
+        const searchCategory = document.getElementById("search-category").value;
+        resources.forEach((resource, index) => {
+            if(resource.category===searchCategory){
+                const resourceDiv = document.createElement("div");
+                resourceDiv.classList.add("resource");
+                resourceDiv.innerHTML = `
+                <h2>${resource.title}</h2>
+                <p>${resource.description}</p>
+                <a href="${resource.link}" target="_blank">Learn more</a>
+                <button class="delete-button" data-index="${index}">Delete</button>
+                `;
+                resourceContainer.appendChild(resourceDiv);
+            }
+        });
+        if(resourceContainer.innerHTML==""){
+            const resourceDiv = document.createElement("div");
+            resourceDiv.innerText="Resource not found"
+            resourceContainer.appendChild(resourceDiv);
+        }
     }
 
     function addResource(resource) {
@@ -41,6 +67,12 @@ document.addEventListener("DOMContentLoaded", () => {
         renderResources();
     });
 
+    search_btn.addEventListener("click",() => {
+        resourceLibrarySection.classList.remove("hidden");
+        addResourceSection.classList.add("hidden");
+        searchResources();
+    })
+
     addResourcesBtn.addEventListener("click", () => {
         addResourceSection.classList.remove("hidden");
         resourceLibrarySection.classList.add("hidden");
@@ -50,8 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const title = document.getElementById("title").value;
         const link = document.getElementById("link").value;
+        const category = document.getElementById("category").value
         const description = document.getElementById("description").value;
-        addResource({ title, link, description });
+        addResource({ title, link, category, description });
         resourceForm.reset();
         alert("Resource added successfully!");
     });
