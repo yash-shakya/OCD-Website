@@ -59,6 +59,8 @@ h1 {
     margin: 5px 0;
 }
 
+
+
 .card a {
     display: inline-block;
     padding: 10px 20px;
@@ -77,6 +79,54 @@ h1 {
 .card a:hover {
     background-color: #0056b3;
 }
+
+/* Ensure dark mode affects all major sections */
+body.dark-mode nav,
+body.dark-mode .card {
+    background-color:#333; /* Slightly lighter than body for contrast */
+   
+}
+body.dark-mode p{
+    color: #f4f4f4;
+}
+
+body.dark-mode .contest{
+    background: #222;
+}
+
+
+/* Adjust text color for better visibility in dark mode */
+body.dark-mode .nav-text a{
+    color: #ffffff;
+}
+
+body.dark-mode .dark-mode-button {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Adjust button hover state in dark mode */
+body.dark-mode .dark-mode-button:hover {
+    background-color: #09fd56;
+    color: #000;
+}
+
+/* Hide moon icon by default (assuming light mode is default) */
+.dark-mode-button .fa-moon {
+    display: none;
+  }
+  
+  /* Show moon icon and hide sun icon in dark mode */
+  body.dark-mode .dark-mode-button .fa-moon {
+    display: inline-block;
+  }
+  
+  body.dark-mode .dark-mode-button .fa-sun {
+    display: none;
+}
+
+/* Dark mode changes end here */
+
 
 
 
