@@ -26,8 +26,8 @@ h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.card {
-    background: #fff;
+.Card {
+    background-color:#bbccfb;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -39,35 +39,33 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.Card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card h2 {
-    color: #0008ff;
+.Card h2 {
+    color:#2e5ee1;
     margin: 0 0 10px;
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.card p {
+.Card p {
     font-size: 1em;
     line-height: 1.6;
-    color: #555;
+    color: black;
     margin: 5px 0;
 }
 
-
-
-.card a {
+.Card a {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px 0;
     font-size: 1em;
     color: #fff;
-    background-color: #007bff;
+    background-color: #2e5ee1;
     border: none;
     border-radius: 4px;
     text-align: center;
@@ -76,24 +74,27 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.card a:hover {
+.Card a:hover {
     background-color: #0056b3;
 }
 
 /* Ensure dark mode affects all major sections */
-body.dark-mode nav,
-body.dark-mode .card {
+body.dark-mode nav
+{
     background-color:#333; /* Slightly lighter than body for contrast */
-   
 }
-body.dark-mode p{
-    color: #f4f4f4;
-}
-
 body.dark-mode .contest{
     background: #222;
 }
 
+body.dark-mode.Card 
+{
+    background-color:#1b47c1;
+}
+body.dark-mode.Card:hover
+{
+    background-color:#1b42c1;
+}
 
 /* Adjust text color for better visibility in dark mode */
 body.dark-mode .nav-text a{
