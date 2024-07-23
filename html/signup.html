@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
         <link rel="icon" type="image/x-icon" href="./public/ocdlogo.png" />
+        <link rel="stylesheet" href="../styles/style.css">
        
     
         <!-- Font Awesome -->
@@ -60,30 +61,52 @@
           </div>
         </div>
       </nav>
-        <div class="signup-container">
-            <div class="signup-header">
-                <h1>Join OCD</h1>
-                <p>Open Code Developers Community</p>
-            </div>
-            <form class="signup-form">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="signup-btn">Sign Up</button>
+      <div class="parent-login">
+        <div class="parent-login-container">
+         
+          <div class="panel right-panel">
+            <h2>Create an Account</h2>
+            <p>We are happy to have you</p>
+            <form class="login-form">
+              <input
+                type="name"
+                id="email"
+                name="email"
+                placeholder="Username"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              
+              <button type="button" class="login-button" onclick="Redirect()">Sign In</button>
             </form>
-            <div class="login-redirect">
-                <p>Have an account? <a href="login.html">Log in</a></p>
+            
+          </div>
+          <div class="panel left-panel">
+            <div class="card-image-container">
+              <img src="../public/ocdlogo.png" alt="OCD Logo" />
             </div>
+            <div class="verification">
+              <h2>Here you Begin!</h2>
+              <p>Dive into a sea of passionate developers</p>
+            </div>
+          </div>
+          
         </div>
+      </div>
+       
     
         <!-- Suggestion Box -->
         <div class="suggestion">
@@ -94,10 +117,10 @@
         <footer>
           <div class="footer-container">
             <div class="footer-left">
-              <a href="index.html" class="footer-logo-link">
+              <a href="../index.html" class="footer-logo-link">
                 <img
                   class="footer-logo"
-                  src="./public/ocdlogo.png"
+                  src="../public/ocdlogo.png"
                   alt="OCD Logo"
                 />
               </a>
@@ -107,10 +130,10 @@
             <div class="footer-center">
               <h3>Quick Links</h3>
               <ul>
-                <li><a href="./events.html">Events</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./achievements.html">Achievements</a></li>
-                <li><a href="./contactUs.html">Contact Us</a></li>
+                <li><a href="html/events.html">Events</a></li>
+                <li><a href="html/about.html">About</a></li>
+                <li><a href="html/achievements.html">Achievements</a></li>
+                <li><a href="html/contactUs.html">Contact Us</a></li>
               </ul>
             </div>
             <div class="footer-right">
@@ -139,4 +162,17 @@
         ></script>
         <script src="../js/index.js"></script>
     </body>
+    <script>
+      function Redirect() {
+        const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Check if fields are filled
+            if (email.trim() === '' || password.trim() === '') {
+                alert('Please fill out all fields.');
+                return; // Prevent redirect if fields are empty
+            }
+            window.location.href = '../index.html';
+}
+    </script>
 </html>
