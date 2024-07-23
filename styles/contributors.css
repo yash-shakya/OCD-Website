@@ -155,3 +155,59 @@ h1 {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    padding: 8px 12px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    padding: 6px 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card h2 {
+    font-size: 0.9em;
+  }
+
+  .card p {
+    font-size: 0.8em;
+  }
+
+  .loading {
+    font-size: 18px;
+  }
+
+  .loader {
+    width: 40px;
+    height: 40px;
+  }
+}
