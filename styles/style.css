@@ -29,14 +29,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
 }
 
 .nav-left {
+ 
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   font-size: 30px;
 }
 
@@ -59,6 +60,7 @@ nav {
 }
 
 .nav-text a {
+  font-size: 1.3rem;
   color: #000000;
   text-decoration: none;
   font-weight: bold;
@@ -263,7 +265,20 @@ body.dark-mode .dark-mode-button .fa-moon {
 body.dark-mode .dark-mode-button .fa-sun {
     display: none;
 }
-
+body.dark-mode .card{
+  background-color: grey;
+  box-shadow: 0 4px 6px rgba(224, 217, 217, 0.2);
+}
+body.dark-mode .card:hover{
+  box-shadow: 0 8px 16px rgba(224, 217, 217, 0.3);
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+body.dark-mode .card .team-info h2{
+  color: white;
+}
+body.dark-mode .card .team-info p{
+  color: white;
+}
 
 /* Pop-up Styles */
 @keyframes fadeIn {
@@ -545,17 +560,19 @@ body.dark-mode .dark-mode-button .fa-sun {
 }
 
 .team-card {
-  background-color: rgb(241, 223, 223);
-  color: #000000;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  flex: 1;
-  min-width: 280px;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+    background-color: rgb(147, 173, 243);
+    color:#000000 ;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .team-photo {
@@ -606,7 +623,7 @@ body.dark-mode .dark-mode-button .fa-sun {
 
 .social-icons i:hover {
     color: #2201f8;
-    transform: scale(1.9);
+    transform: scale(1.6);
     
   }
 
@@ -745,16 +762,18 @@ ul li a:hover {
 }
 
 .program-card {
-  background: #d9e0ff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  flex: 1;
-  min-width: 280px;
-  max-width: 350px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+
+    background: #053a62;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+
 }
 
 .program-photo {

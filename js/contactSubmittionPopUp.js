@@ -1,4 +1,4 @@
-const form = document.getElementById('myForm');
+const form = document.getElementById('contact-form');
 const popup = document.getElementById('popup');
 const popupMessage = document.getElementById('popup-message');
 const closePopup = document.getElementById('close-popup');
