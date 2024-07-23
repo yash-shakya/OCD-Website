@@ -111,7 +111,7 @@ body.dark-mode .contact-form label {
 
 /* Submit Button */
 body.dark-mode .submit-button {
-  background-color: #09fd56; /* Bright green for visibility */
+  background-color: #4a83ff; /* Bright green for visibility */
   color: #000; /* Dark text for contrast */
   border-radius: 5px;
   padding: 12px 24px;
