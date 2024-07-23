@@ -60,19 +60,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // JS code for Pop-up section ends here
-
-//to hightlight visited navbar tabs
-document.addEventListener('DOMContentLoaded', () => {
-  const currentPath = window.location.pathname.toLowerCase().split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-text a');
-
-  navLinks.forEach(link => {
-      const linkPath = link.getAttribute('href').toLowerCase().split('/').pop();
-
-      if ((linkPath === '' && currentPath === 'index.html') || 
-          (currentPath === '' && linkPath === 'index.html') || 
-          linkPath === currentPath) {
-          link.classList.add('active');
-      }
-  });
-});
