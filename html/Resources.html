@@ -50,6 +50,7 @@
     </nav>
 
     <div class="main-content">
+        <!-- Initial View: Choose Option -->
         <div id="choice-modal" class="modal">
             <h1>Choose an Option:</h1>
             <div class="resources-box">
@@ -58,6 +59,7 @@
             </div>
         </div>
 
+        <!-- View Resources Section -->
         <section id="resource-library" class="resource-library hidden">
             <h1>Resource Library</h1>
             <div class="search-container">
@@ -69,6 +71,7 @@
             </div>
         </section>
 
+        <!-- Add Resource Section -->
         <section class="add-resource hidden">
             <h1>Add New Resource</h1>
             <form id="resource-form">
@@ -83,6 +86,20 @@
                 <div class="label">
                     <label for="description">Description:</label>
                     <textarea id="description" name="description" required></textarea>
+                </div>
+                <div class="label">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="AI">AI</option>
+                        <option value="ML">ML</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Blockchain">Blockchain</option>
+                        <option value="DSA">DSA</option>
+                        <option value="JS">JS</option>
+                        <option value="Web Dev">Web Dev</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
                 <button type="submit">Add Resource</button>
             </form>
