@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             else if(searchCategory===""){
-                console.log("Im in line 51")
                 for (let i=0;i<searchTag.length;i++) {
                     if (resource.title.toLocaleLowerCase().includes(searchTag[i])) {
                     const resourceDiv = document.createElement("div");
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             else{
-                console.log("Im in line 68")
                 for(let i=0;i<searchTag.length;i++){
                     if(resource.category===searchCategory && resource.title.toLocaleLowerCase().includes(searchTag[i])){
                         categoryResource.push(resource)
