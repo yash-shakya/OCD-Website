@@ -28,18 +28,57 @@ document.addEventListener("DOMContentLoaded", () => {
     function searchResources(){
         resourceContainer.innerHTML = "";
         const searchText = document.getElementById("search-bar").value;
+        const searchTag=searchText.toLocaleLowerCase().split(" ")
+        console.log("tags:",searchTag)
         const searchCategory = document.getElementById("search-category").value;
+        const categoryResource=[];
         resources.forEach((resource, index) => {
-            if(resource.category===searchCategory){
-                const resourceDiv = document.createElement("div");
-                resourceDiv.classList.add("resource");
-                resourceDiv.innerHTML = `
-                <h2>${resource.title}</h2>
-                <p>${resource.description}</p>
-                <a href="${resource.link}" target="_blank">Learn more</a>
-                <button class="delete-button" data-index="${index}">Delete</button>
-                `;
-                resourceContainer.appendChild(resourceDiv);
+            if(searchText===""){
+                if(resource.category===searchCategory){
+                    categoryResource.push(resource)
+                    const resourceDiv = document.createElement("div");
+                    resourceDiv.classList.add("resource");
+                    resourceDiv.innerHTML = `
+                    <h2>${resource.title}</h2>
+                    <p>${resource.description}</p>
+                    <a href="${resource.link}" target="_blank">Learn more</a>
+                    <button class="delete-button" data-index="${index}">Delete</button>
+                    `;
+                    resourceContainer.appendChild(resourceDiv);
+                }
+            }
+            else if(searchCategory===""){
+                console.log("Im in line 51")
+                for (let i=0;i<searchTag.length;i++) {
+                    if (resource.title.toLocaleLowerCase().includes(searchTag[i])) {
+                    const resourceDiv = document.createElement("div");
+                    resourceDiv.classList.add("resource");
+                    resourceDiv.innerHTML = `
+                    <h2>${resource.title}</h2>
+                    <p>${resource.description}</p>
+                    <a href="${resource.link}" target="_blank">Learn more</a>
+                    <button class="delete-button" data-index="${index}">Delete</button>
+                    `;
+                    resourceContainer.appendChild(resourceDiv);     
+                    }
+                }
+            }
+            else{
+                console.log("Im in line 68")
+                for(let i=0;i<searchTag.length;i++){
+                    if(resource.category===searchCategory && resource.title.toLocaleLowerCase().includes(searchTag[i])){
+                        categoryResource.push(resource)
+                        const resourceDiv = document.createElement("div");
+                        resourceDiv.classList.add("resource");
+                        resourceDiv.innerHTML = `
+                        <h2>${resource.title}</h2>
+                        <p>${resource.description}</p>
+                        <a href="${resource.link}" target="_blank">Learn more</a>
+                        <button class="delete-button" data-index="${index}">Delete</button>
+                        `;
+                        resourceContainer.appendChild(resourceDiv);
+                    }
+                }
             }
         });
         if(resourceContainer.innerHTML==""){
@@ -48,31 +87,37 @@ document.addEventListener("DOMContentLoaded", () => {
             resourceContainer.appendChild(resourceDiv);
         }
     }
-
+    
     function addResource(resource) {
         resources.push(resource);
         localStorage.setItem("resources", JSON.stringify(resources));
         renderResources();
     }
-
+    
     function deleteResource(index) {
         resources.splice(index, 1);
         localStorage.setItem("resources", JSON.stringify(resources));
         renderResources();
     }
-
+    
     viewResourcesBtn.addEventListener("click", () => {
         resourceLibrarySection.classList.remove("hidden");
         addResourceSection.classList.add("hidden");
         renderResources();
     });
-
+    
     search_btn.addEventListener("click",() => {
         resourceLibrarySection.classList.remove("hidden");
         addResourceSection.classList.add("hidden");
         searchResources();
     })
 
+    clear_btn.addEventListener("click",()=>{
+        resourceLibrarySection.classList.remove("hidden");
+        addResourceSection.classList.add("hidden");
+        renderResources()
+    })
+    
     addResourcesBtn.addEventListener("click", () => {
         addResourceSection.classList.remove("hidden");
         resourceLibrarySection.classList.add("hidden");
