@@ -54,15 +54,32 @@
         </div>
       </nav>
 
-    <div class="main-content">
-        <!-- Initial View: Choose Option -->
-        <div id="choice-modal" class="modal">
-            <h1>Choose an Option:</h1>
-            <div class="resources-box">
-                <button id="view-resources-btn"><a href="./view-resource.html">View Resource</a></button>
-                <button id="add-resources-btn"><a href="./add-resource.html">Add Reources</a></button>
+    <div class="main-content-view">
+        
+        <!-- View Resources Section -->
+        <section id="resource-library" class="resource-library hidden">
+            <h1>Resource Library</h1>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search resources...">
+                <select name="search-category" id="search-category">
+                    <option value="">Select Category</option>
+                    <option value="AI">AI</option>
+                    <option value="ML">ML</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Blockchain">Blockchain</option>
+                    <option value="DSA">DSA</option>
+                    <option value="JS">JS</option>
+                    <option value="Web Dev">Web Dev</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button id="search-button">Search</button>
+                <button id="clear-button">Clear</button>
             </div>
-        </div>
+            <div id="resource-container">
+                <!-- Resources will be dynamically loaded here -->
+            </div>
+        </section>
     </div>
 
     <div class="suggestion">
@@ -99,7 +116,7 @@
         </div>
     </footer>
     <script src="../js/index.js"></script>
-    <script src="../js/resourceLibrary.js"></script>
+    <script src="../js/view-resource.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

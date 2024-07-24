@@ -1,5 +1,10 @@
 .main-content {
-    min-height: 490px;
+    min-height: 272px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main-content-view {
+    min-height: 500px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -7,7 +12,7 @@
 .modal {
     width: 100%;
     height: 90%;
-    margin-top: 110px;
+    margin-top: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +37,12 @@
     cursor: pointer;
     border-radius: 12px;
     background-color: rgba(171, 219, 202, 0.8);
+}
+
+#view-resources-btn a,
+#add-resources-btn a{
+    text-decoration: none;
+    color: #000;
 }
 
 #view-resources-btn:hover,
@@ -64,7 +75,7 @@
 
 #search-bar {
     padding: 10px;
-    width: calc(85% - 180px);
+    width: calc(89% - 180px);
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -75,18 +86,8 @@
     border-radius: 5px;
 }
 
+#clear-button,
 #search-button {
-    padding: 11px;
-    margin-left: 10px;
-    border: none;
-    outline: none;
-    color: black;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: rgba(171, 219, 202, 0.8);
-}
-#clear-button {
     padding: 11px;
     margin-left: 2px;
     border: none;
@@ -98,7 +99,8 @@
     background-color: rgba(171, 219, 202, 0.8);
 }
 
-#clear-button:hover {
+#clear-button:hover,
+#search-button:hover {
     background-color: rgb(126, 165, 151);
     color: #fff;
     box-shadow: 0px 4px 7px rgba(128, 128, 128, 0.5);
@@ -175,7 +177,7 @@
 
 /* Add Resource styles */
 .add-resource {
-    margin: 50px auto;
+    margin: 140px auto 45px;
     max-width: 500px;
     padding: 20px;
     border: 1px solid #ddd;
@@ -394,6 +396,11 @@ body.dark-mode .add-resource label {
 body.dark-mode .add-resource button {
     background-color: #4caf50;
     color: white;
+}
+
+body.dark-mode .resource{
+    background-color: #46464671;
+    border: 1px solid #343333;
 }
 
 body.dark-mode .add-resource button:hover {
