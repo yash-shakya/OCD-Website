@@ -722,11 +722,17 @@ ul li a:hover {
 .programs-container a {
   font-weight: 900;
   color: #ffffff;
+  background-color:#0096c7;
+  margin-top:0px;
+  margin-left:3%;
+}
+.learnMore
+{
+  z-index: 2;
 }
 .programs-container a:hover {
-  color: #f7f7f7;
-  background-color: #1206eb;
- 
+  border-style: solid;
+  border-color: #ffffff; 
 }
 
 .programs-container h1 {
@@ -754,7 +760,6 @@ ul li a:hover {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-
 }
 
 .program-photo {
@@ -768,6 +773,8 @@ ul li a:hover {
 .program-info {
   text-align: center;
   background-color: #d9e0ff;
+  margin-bottom : 0px;
+  height:35%;
 }
 
 .program-info h3 {
@@ -778,6 +785,7 @@ ul li a:hover {
 .program-info p {
   font-size: 16px;
   color: #555;
+  padding:5px;
 }
 
 .view-demo {
