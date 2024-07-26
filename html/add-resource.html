@@ -32,7 +32,7 @@
               <div class="dropdown-content">
                 <a href="contributors.html">Contributors</a>
                 <a href="contests.html">Contest</a>
-                <a href="Blog-page.html">Blogs</a>
+                <a href="blog.html">Blogs</a>
                 <a href="achievements.html">Achievements</a>
                 <a href="contactUs.html">Contact Us</a>
               </div>
@@ -55,14 +55,40 @@
       </nav>
 
     <div class="main-content">
-        <!-- Initial View: Choose Option -->
-        <div id="choice-modal" class="modal">
-            <h1>Choose an Option:</h1>
-            <div class="resources-box">
-                <button id="view-resources-btn"><a href="./view-resource.html">View Resource</a></button>
-                <button id="add-resources-btn"><a href="./add-resource.html">Add Reources</a></button>
-            </div>
-        </div>
+
+        <!-- Add Resource Section -->
+        <section class="add-resource hidden">
+            <h1>Add New Resource</h1>
+            <form id="resource-form">
+                <div class="label">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="label">
+                    <label for="link">Link:</label>
+                    <input type="url" id="link" name="link" required>
+                </div>
+                <div class="label">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <div class="label">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="AI">AI</option>
+                        <option value="ML">ML</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Blockchain">Blockchain</option>
+                        <option value="DSA">DSA</option>
+                        <option value="JS">JS</option>
+                        <option value="Web Dev">Web Dev</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <button type="submit">Add Resource</button>
+            </form>
+        </section>
     </div>
 
     <div class="suggestion">
@@ -99,7 +125,7 @@
         </div>
     </footer>
     <script src="../js/index.js"></script>
-    <script src="../js/resourceLibrary.js"></script>
+    <script src="../js/add-resource.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
