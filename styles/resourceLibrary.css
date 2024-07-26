@@ -19,12 +19,16 @@
 }
 
 .modal h1 {
+    margin-top: 30px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 .resources-box {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 #view-resources-btn,
 #add-resources-btn {
