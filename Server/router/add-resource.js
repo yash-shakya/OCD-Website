@@ -1,6 +1,5 @@
 import express from "express";
 import resource from "../models/resource.js"
-// import { createResource } from "../controller/add-resource";
 
 const router=express.Router();
 
