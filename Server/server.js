@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import routes from "./router/routes.js";
+import cors from "cors"
 dotenv.config();
 const app=express();
 
@@ -16,6 +17,8 @@ async function connectDB(){
 }
 
 app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+app.use(cors());
 
 const startServer = async () => {
     await connectDB();

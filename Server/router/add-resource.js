@@ -3,7 +3,7 @@ import resource from "../models/resource.js"
 
 const router=express.Router();
 
-router.post("/create",async (req,res)=>{
+router.post("/",async (req,res)=>{
     const { title, link, category, description } = req.body;
     const result = await resource.create({
         title,
