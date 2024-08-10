@@ -13,7 +13,7 @@
 /* Navbar Styles */
 nav {
   background-color: #9dade0;
-  padding: 10px 20px;
+  padding: 5px 10px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -134,50 +134,47 @@ nav {
   display: block;
 }
 
-
 /* dark-mode-button */
-
-
 .dark-mode-button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1rem;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dark-mode-button:hover {
-    background-color: hsl(54, 98%, 51%);
-    color: #000;
+  background-color: hsl(54, 98%, 51%);
+  color: #000;
 }
 
 /* Light Mode Styles */
-body.light-mode  {
-    color: #000000; 
+body.light-mode {
+  color: #000000;
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background-color: #222; 
-    color: #ffffff; 
+  background-color: #000000;
+  color: #ffffff;
 }
 
 body.dark-mode .hero-section,
 body.dark-mode nav,
 body.dark-mode .team-section,
-body.dark-mode .programs-section {
-    background-color: #333;
-   
+body.dark-mode .programs-section,
+body.dakmode .project-section {
+  background-color: #000000;
 }
 
 body.dark-mode .hero-section h1,
@@ -185,11 +182,11 @@ body.dark-mode nav a,
 body.dark-mode .team-section h1,
 body.dark-mode .programs-section h1,
 body.dark-mode .container h1 {
-    color: #ffffff;
-   
+  color: #ffffff;
 }
-body.dark-mode nav a:hover{
-    background-color: #000000;
+
+body.dark-mode nav a:hover {
+  background-color: #000000;
   color: #fff;
   border-radius: 5px;
 }
@@ -208,55 +205,68 @@ body.dark-mode nav .dropdown-content a:hover {
   color: #000000;
   border-radius: 5px;
 }
-body.dark-mode .programs-section h3{
-    color: #000;
-}
 
+body.dark-mode .programs-section h3,
+body.dark-mode .programs-section h1 {
+  color: #000000;
+}
 
 body.dark-mode .nav-toggle i {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-body.dark-mode .dark-mode-button{
-    background-color: #ffffff;
-    color: #333;
-}
-
-body.dark-mode .programs-section h3 {
-  background-color:#d9e0ff;
+body.dark-mode .dark-mode-button {
+  background-color: #ffffff;
   color: #333;
 }
 
+body.dark-mode #headingourprojects{
+  color: #fbfbfb;
+}
+
+body.dark-mode #herosectionheading ,
+body.dark-mode #headingclubmembers{
+  color: #ffffff;
+}
+
+body.dark-mode .project-container h1 {
+  color: #ffffff;
+}
+
 body.dark-mode .dark-mode-button:hover {
-    background-color: hsl(56, 98%, 51%);
-    color: #000;
+  background-color: hsl(56, 98%, 51%);
+  color: #000;
 }
 
 /* Hide moon icon by default (assuming light mode is default) */
 .dark-mode-button .fa-moon {
-    display: none;
+  display: none;
 }
-  
+
 /* Show moon icon and hide sun icon in dark mode */
 body.dark-mode .dark-mode-button .fa-moon {
-    display: inline-block;
+  display: inline-block;
 }
-  
+
 body.dark-mode .dark-mode-button .fa-sun {
-    display: none;
+  display: none;
 }
-body.dark-mode .card{
+
+body.dark-mode .card {
   background-color: grey;
   box-shadow: 0 4px 6px rgba(224, 217, 217, 0.2);
 }
-body.dark-mode .card:hover{
+
+body.dark-mode .card:hover {
   box-shadow: 0 8px 16px rgba(224, 217, 217, 0.3);
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
 }
-body.dark-mode .card .team-info h2{
+
+body.dark-mode .card .team-info h2 {
   color: white;
 }
-body.dark-mode .card .team-info p{
+
+body.dark-mode .card .team-info p {
   color: white;
 }
 
@@ -677,11 +687,12 @@ ul li a:hover {
 .suggestion {
   position: fixed;
   right: 15px;
-  bottom: 80px;
-  width: 80px;
-  height: 80px;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
   background-color: #f5e025;
   border-radius: 50%;
+ font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -704,7 +715,7 @@ ul li a:hover {
 }
 .suggestion a {
   color: rgb(0, 0, 0);
-  font-weight: 800;
+  font-weight: 900;
   text-decoration: none;
 }
 /* Programs Section Styles */
@@ -801,4 +812,189 @@ ul li a:hover {
 
 .program-card:hover .program-photo {
   transform: scale(1.1);
+}
+
+/* Project Section */
+.project-section {
+  padding: 4rem 2rem;
+  
+}
+
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#headingourprojects {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 3rem;
+  font-family:  Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+
+}
+
+.project-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family:  Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-family:  Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+.learnMore {
+  text-align: center;
+}
+
+.learnMore a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.learnMore a:hover {
+  background-color: #0056b3;
+}
+
+
+/* ocd members */
+
+/* Club Members Section Styles */
+.club-members-section {
+  padding: 50px 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.club-members-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#headingclubmembers {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.club-members-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.club-member-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.club-member-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.club-member-info {
+  padding: 1.5rem;
+}
+
+.club-member-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.club-member-info p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+.club-member-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.club-member-social-icons a {
+  color: #0008ff;
+  font-size: 30px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  text-decoration: none;
+}
+
+.club-member-social-icons i:hover {
+  color: #2201f8;
+  transform: scale(1.6);
+}
+
+.view-more{
+  text-align: right;
+  margin-top: 10px;
+  text-decoration: none;
 }
