@@ -1,3 +1,12 @@
 .others-member{
   
 }
+
+.image-content{
+  position: relative;
+  background: #2d5084;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
