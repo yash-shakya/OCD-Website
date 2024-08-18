@@ -1,414 +1,415 @@
 .main-content {
-    min-height: 272px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  min-height: 272px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 100vh;
 }
 
 .main-content-view {
-    min-height: 500px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* Modal styles */
 .modal {
-    width: 100%;
-    height: 90%;
-    margin-top: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 90%;
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal h1 {
-    margin-top: 30px;
-    text-align: center;
-    margin-bottom: 60px;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 .resources-box {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 #view-resources-btn,
 #add-resources-btn {
-    margin-left: 80px;
-    padding: 15px;
-    border: none;
-    outline: none;
-    color: black;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 12px;
-    background-color: rgba(171, 219, 202, 0.8);
+  margin-left: 80px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: rgba(171, 219, 202, 0.8);
 }
 
 #view-resources-btn a,
-#add-resources-btn a{
-    text-decoration: none;
-    color: #000;
+#add-resources-btn a {
+  text-decoration: none;
+  color: #000;
 }
 
 #view-resources-btn:hover,
 #add-resources-btn:hover {
-    color: #fff;
-    background-color: rgb(126, 165, 151);
-    box-shadow: 5px 8px 5px rgba(128, 128, 128, 0.5);
+  color: #fff;
+  background-color: rgb(126, 165, 151);
+  box-shadow: 5px 8px 5px rgba(128, 128, 128, 0.5);
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* Resource Library styles */
 .resource-library {
-    padding: 20px;
+  padding: 20px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .search-container {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #search-bar {
-    padding: 10px;
-    width: calc(89% - 180px);
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 10px;
+  width: calc(89% - 180px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 #search-category {
-    padding: 10px;
-    width: calc(25% - 180px);
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 10px;
+  width: calc(25% - 180px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #clear-button,
 #search-button {
-    padding: 11px;
-    margin-left: 2px;
-    border: none;
-    outline: none;
-    color: black;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: rgba(171, 219, 202, 0.8);
+  padding: 11px;
+  margin-left: 2px;
+  border: none;
+  outline: none;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(171, 219, 202, 0.8);
 }
 
 #clear-button:hover,
 #search-button:hover {
-    background-color: rgb(126, 165, 151);
-    color: #fff;
-    box-shadow: 0px 4px 7px rgba(128, 128, 128, 0.5);
+  background-color: rgb(126, 165, 151);
+  color: #fff;
+  box-shadow: 0px 4px 7px rgba(128, 128, 128, 0.5);
 }
 
 /* Resource Container styles */
 
 .resource-library {
-    margin-top: 120px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 120px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .resource-library h1 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 #resource-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 20px;
-    grid-auto-rows: minmax(150px, auto);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  grid-auto-rows: minmax(150px, auto);
 }
 
 .resource {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-    position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
 }
 
 .resource:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .resource h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .resource p {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .resource a {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
 .resource a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .delete-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #ff5c5c;
-    border: none;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5c5c;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .delete-button:hover {
-    background: #ff1c1c;
+  background: #ff1c1c;
 }
 
 /* Add Resource styles */
 .add-resource {
-    margin: 140px auto 45px;
-    max-width: 500px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 140px auto 45px;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .add-resource h1 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .add-resource .label {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .add-resource label {
-    display: block;
-    font-weight: bold;
+  display: block;
+  font-weight: bold;
 }
 
 .add-resource input,
 .add-resource textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .add-resource button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4caf50;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .add-resource button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .suggestion {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    width: 100px;
-    height: 100px;
-    background-color: #1206eb;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #1206eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .suggestion a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 /* Footer styles */
 footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .footer-left,
 .footer-center,
 .footer-right {
-    flex: 1;
-    padding: 10px;
+  flex: 1;
+  padding: 10px;
 }
 
 .footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-left a {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-left img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-center h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-center ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-center li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .footer-center a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 .footer-center a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-right h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .social-icons a {
-    color: #fff;
-    font-size: 24px;
-    transition: color 0.3s ease;
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
 /* ADD THESE NEW STYLES */
 /* Ensure dark mode affects all major sections */
 body.dark-mode .content,
-body.dark-mode nav{
-    background-color: #333; /* Slightly lighter than body for contrast */
-    color: #ffffff;
+body.dark-mode nav {
+  background-color: #333; /* Slightly lighter than body for contrast */
+  color: #ffffff;
 }
 
 /* Adjust text color for better visibility in dark mode */
-body.dark-mode .nav-text a{
-    color: #ffffff;
+body.dark-mode .nav-text a {
+  color: #ffffff;
 }
 
 body.dark-mode .dark-mode-button {
-    background-color: #ffffff;
-    color: #333;
+  background-color: #ffffff;
+  color: #333;
 }
 
 /* Adjust button hover state in dark mode */
 body.dark-mode .dark-mode-button:hover {
-    background-color: #09fd56;
-    color: #000;
+  background-color: #09fd56;
+  color: #000;
 }
 
 /* Hide moon icon by default (assuming light mode is default) */
 .dark-mode-button .fa-moon {
-    display: none;
-  }
-  
-  /* Show moon icon and hide sun icon in dark mode */
-  body.dark-mode .dark-mode-button .fa-moon {
-    display: inline-block;
-  }
-  
-  body.dark-mode .dark-mode-button .fa-sun {
-    display: none;
+  display: none;
+}
+
+/* Show moon icon and hide sun icon in dark mode */
+body.dark-mode .dark-mode-button .fa-moon {
+  display: inline-block;
+}
+
+body.dark-mode .dark-mode-button .fa-sun {
+  display: none;
 }
 
 /* Add Resource section in dark mode */
 body.dark-mode .add-resource {
-    background-color: #333;
-    border-color: #555;
+  background-color: #333;
+  border-color: #555;
 }
 
 body.dark-mode .add-resource input,
 body.dark-mode .add-resource textarea {
-    background-color: #444;
-    color: #fff;
-    border-color: #555;
+  background-color: #444;
+  color: #fff;
+  border-color: #555;
 }
 
 body.dark-mode .add-resource label {
-    color: #bbb;
+  color: #bbb;
 }
 
 body.dark-mode .add-resource button {
-    background-color: #4caf50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
 }
 
-body.dark-mode .resource{
-    background-color: #46464671;
-    border: 1px solid #343333;
+body.dark-mode .resource {
+  background-color: #46464671;
+  border: 1px solid #343333;
 }
 
 body.dark-mode .add-resource button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 /* Dark mode changes end here */

@@ -1,128 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resource Library</title>
-    <link rel="icon" type="image/x-icon" href="../public/ocdlogo.png">
-    <link rel="stylesheet" href="../styles/resourceLibrary.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../public/ocdlogo.png" />
+    <link rel="stylesheet" href="../styles/resourceLibrary.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="./styles/feedback.css" />
-
   </head>
-<body>
-      <!-- Navbar -->
-      <nav>
-        <div class="nav-content">
-          <button class="nav-toggle" id="nav-toggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="nav-left">
-            <a href="..\index.html" class="logo-link">
-              <img class="logo" src="../public/ocdlogo.png" alt="OCD Logo" />
-            </a>
-            <div class="nav-text"><a href="..\index.html">Home</a></div>
-            <div class="nav-text"><a href="about.html">About</a></div>
-            <div class="nav-text"><a href="events.html">Events</a></div>
-            <div class="nav-text">
-              <a href="https://nitkurukshetra-repo.vercel.app/" title="Please use a laptop for a better experience">NIT KKR - PYQs</a>
-              </div>
-            <div class="nav-text">
-              <a href="Resources.html">Resources</a>
-            </div>
-            <div class="nav-text dropdown">
-              <a href="#">Links</a>
-              <div class="dropdown-content">
-                <a href="contributors.html">Contributors</a>
-                <a href="contests.html">Contest</a>
-                <a href="blog.html">Blogs</a>
-                <a href="achievements.html">Achievements</a>
-                <a href="contactUs.html">Contact Us</a>
-              </div>
-            </div>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-content">
+        <button class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-left">
+          <a href="..\index.html" class="logo-link">
+            <img class="logo" src="../public/ocdlogo.png" alt="OCD Logo" />
+          </a>
+          <div class="nav-text"><a href="..\index.html">&lt;Home&gt;</a></div>
+          <div class="nav-text"><a href="about.html">&lt;About&gt;</a></div>
+          <div class="nav-text"><a href="events.html">&lt;Events&gt;</a></div>
+          <div class="nav-text">
+            <a
+              href="https://nitkurukshetra-repo.vercel.app/"
+              title="Please use a laptop for a better experience"
+              >&lt;NIT KKR - PYQs&gt;</a
+            >
           </div>
-          <div class="nav-right">
-            
-            
-            <button id="dark-mode-toggle" class="dark-mode-button">
-              <i class="fas fa-sun"></i>
-              <!-- Sun icon for light mode -->
-              <i class="fas fa-moon"></i>
-              <!-- Moon icon for dark mode -->
-            </button>
+          <div class="nav-text">
+            <a href="Resources.html">&lt;Resources&gt;</a>
+          </div>
+          <div class="nav-text dropdown">
+            <a href="#">&lt;Links&gt;</a>
+            <div class="dropdown-content">
+              <a href="contributors.html">&lt;Contributors&gt;</a>
+              <a href="contests.html">&lt;Contest&gt;</a>
+              <a href="blog.html">&lt;Blogs&gt;</a>
+              <a href="achievements.html">&lt;Achievements&gt;</a>
+              <a href="contactUs.html">&lt;Contact Us&gt;</a>
+            </div>
           </div>
         </div>
-      </nav>
+        <div class="nav-right">
+          <button id="dark-mode-toggle" class="dark-mode-button">
+            <i class="fas fa-sun"></i>
+            <!-- Sun icon for light mode -->
+            <i class="fas fa-moon"></i>
+            <!-- Moon icon for dark mode -->
+          </button>
+        </div>
+      </div>
+    </nav>
 
     <div class="main-content-view">
-        
-        <!-- View Resources Section -->
-        <section id="resource-library" class="resource-library">
-            <h1>Resource Library</h1>
-            <div class="search-container">
-                <input type="text" id="search-bar" placeholder="Search resources...">
-                <select name="search-category" id="search-category">
-                    <option value="">Select Category</option>
-                    <option value="AI">AI</option>
-                    <option value="ML">ML</option>
-                    <option value="Data Science">Data Science</option>
-                    <option value="Cybersecurity">Cybersecurity</option>
-                    <option value="Blockchain">Blockchain</option>
-                    <option value="DSA">DSA</option>
-                    <option value="JS">JS</option>
-                    <option value="Web Dev">Web Dev</option>
-                    <option value="Other">Other</option>
-                </select>
-                <button id="search-button">Search</button>
-                <button id="clear-button">Clear</button>
-            </div>
-            <div id="resource-container">
-                <!-- Resources will be dynamically loaded here -->
-            </div>
-            <div class="resources-box">
-              <button id="add-resources-btn"><a href="./add-resource.html">Add Reources</a></button>
-          </div>
-        </section>
-        
+      <!-- View Resources Section -->
+      <section id="resource-library" class="resource-library">
+        <h1>Resource Library</h1>
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Search resources..."
+          />
+          <select name="search-category" id="search-category">
+            <option value="">Select Category</option>
+            <option value="AI">AI</option>
+            <option value="ML">ML</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="Blockchain">Blockchain</option>
+            <option value="DSA">DSA</option>
+            <option value="JS">JS</option>
+            <option value="Web Dev">Web Dev</option>
+            <option value="Other">Other</option>
+          </select>
+          <button id="search-button">Search</button>
+          <button id="clear-button">Clear</button>
+        </div>
+        <div id="resource-container">
+          <!-- Resources will be dynamically loaded here -->
+        </div>
+        <div class="resources-box">
+          <button id="add-resources-btn">
+            <a href="./add-resource.html">Add Reources</a>
+          </button>
+        </div>
+      </section>
     </div>
 
     <div class="suggestion">
-        <a href="feedback.html" class="suggestion-link">Help Us Improve</a>
+      <a href="feedback.html" class="suggestion-link">Help Us Improve</a>
     </div>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <a href="../index.html" class="footer-logo-link" title="Back to Homepage">
-                    <img class="footer-logo" src="../public/ocdlogo.png" alt="OCD Logo">
-                </a>
-                <p>&copy; 2024 Open Code Developers Society, NIT Kurukshetra.</p>
-                <p>All rights reserved.</p>
-            </div>
-            <div class="footer-center">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="./events.html">Events</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./achievements.html">Achievements</a></li>
-                    <li><a href="./contactUs.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-right">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://github.com/Mohak1809/OCD-Website" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/ocd_nitkkr/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/showcase/opencode-developers-society" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-left">
+          <a
+            href="../index.html"
+            class="footer-logo-link"
+            title="Back to Homepage"
+          >
+            <img
+              class="footer-logo"
+              src="../public/ocdlogo.png"
+              alt="OCD Logo"
+            />
+          </a>
+          <p>&copy; 2024 Open Code Developers Society, NIT Kurukshetra.</p>
+          <p>All rights reserved.</p>
         </div>
+        <div class="footer-center">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./events.html">Events</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./achievements.html">Achievements</a></li>
+            <li><a href="./contactUs.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://github.com/Mohak1809/OCD-Website" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://x.com" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/ocd_nitkkr/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/showcase/opencode-developers-society"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="../js/index.js"></script>
     <script src="../js/view-resource.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

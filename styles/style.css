@@ -5,20 +5,12 @@
   box-sizing: border-box;
 }
 
-#herosectionheading {
-  font-size: 35px;
-  font-weight: bolder;
-  background-image: linear-gradient(to right, #0077b6, #ff758c, #190571);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 /* Navbar Styles */
 nav {
   /* background-color: #0096c7; */
   /* background-color: #4f2f2f; */
   padding: 5px 10px;
-  background-color: #ffff;
+  background-color: #ffffff;
   position: fixed;
   width: 100%;
   top: 0;
@@ -64,7 +56,7 @@ nav {
 
 .nav-text a {
   font-size: 1.3rem;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
   padding: 5px 10px;
@@ -100,146 +92,6 @@ nav {
 
 .nav-text:hover .dropdown-content {
   display: block;
-}
-
-/* dark-mode-button */
-.dark-mode-button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dark-mode-button:hover {
-  background-color: hsl(54, 98%, 51%);
-  color: #000;
-}
-
-/* Light Mode Styles */
-body.light-mode {
-  color: #000000;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-body.dark-mode .hero-section,
-body.dark-mode nav,
-body.dark-mode .team-section,
-body.dark-mode .programs-section,
-body.darkmode .project-section {
-  background-color: #000000;
-}
-body.dark-mode footer {
-  background-color: #000000;
-}
-
-body.dark-mode .hero-section h1,
-body.dark-mode nav a,
-body.dark-mode .team-section h1,
-body.dark-mode .programs-section h1,
-body.dark-mode .container h1 {
-  color: #ffffff;
-}
-
-body.dark-mode nav a:hover,
-body.darkmode nav {
-  background-color: #000000;
-  color: #fff;
-  border-radius: 5px;
-}
-
-body.dark-mode nav .dropdown-content {
-  background-color: #000000;
-  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-body.dark-mode nav .dropdown-content a {
-  color: #ffffff;
-}
-
-body.dark-mode nav .dropdown-content a:hover {
-  background-color: #ffffff;
-  color: #000000;
-  border-radius: 5px;
-}
-
-body.dark-mode .programs-section h3,
-body.dark-mode .programs-section h1 {
-  color: #000000;
-}
-
-body.dark-mode .nav-toggle i {
-  color: #ffffff;
-}
-
-body.dark-mode .dark-mode-button {
-  background-color: #ffffff;
-  color: #333;
-}
-
-body.dark-mode #headingourprojects {
-  color: #fbfbfb;
-}
-
-body.dark-mode #herosectionheading,
-body.dark-mode #headingclubmembers {
-  color: #ffffff;
-}
-
-body.dark-mode .project-container h1 {
-  color: #ffffff;
-}
-
-body.dark-mode .dark-mode-button:hover {
-  background-color: hsl(56, 98%, 51%);
-  color: #000;
-}
-
-/* Hide moon icon by default (assuming light mode is default) */
-.dark-mode-button .fa-moon {
-  display: none;
-}
-
-/* Show moon icon and hide sun icon in dark mode */
-body.dark-mode .dark-mode-button .fa-moon {
-  display: inline-block;
-}
-
-body.dark-mode .dark-mode-button .fa-sun {
-  display: none;
-}
-
-body.dark-mode .card {
-  background-color: grey;
-  box-shadow: 0 4px 6px rgba(224, 217, 217, 0.2);
-}
-
-body.dark-mode .card:hover {
-  box-shadow: 0 8px 16px rgba(224, 217, 217, 0.3);
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-}
-
-body.dark-mode .card .team-info h2 {
-  color: white;
-}
-
-body.dark-mode .card .team-info p {
-  color: white;
 }
 
 /* Pop-up Styles */
@@ -436,6 +288,20 @@ body.dark-mode .card .team-info p {
 }
 
 /* Hero Section Styles */
+#headingourprogram {
+  font-size: 40px;
+  background-image: linear-gradient(to right, #fd07b7, #370aff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#herosectionheading {
+  font-size: 35px;
+  font-weight: bolder;
+  color: #ffffff;
+}
+
 .hero-section {
   padding: 80px 20px 20px 20px;
 }
@@ -480,16 +346,213 @@ body.dark-mode .card .team-info p {
   -webkit-text-fill-color: transparent;
 }
 
+/* Programs Section Styles */
+.programs-section {
+  padding: 10px 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.programs-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.programs-container a {
+  font-weight: 900;
+  color: #ffffff;
+
+  margin-top: 0px;
+  margin-left: 3%;
+}
+.learnMore {
+  z-index: 2;
+}
+.programs-container a:hover {
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+.programs-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.programs-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.program-card {
+  /* background: #053a62; */
+  border-radius: 10px;
+  background-color: #fffdfd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-photo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.program-info {
+  text-align: center;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  height: 35%;
+}
+
+.program-info h3 {
+  margin: 15px 0 10px;
+  background-image: linear-gradient(to right, #2f00ff, #ff0000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.3rem;
+}
+
+.program-info p {
+  font-size: 16px;
+  color: #000000;
+  padding: 5px;
+
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.view-demo {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #072e7c;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.program-card:hover .program-photo {
+  transform: scale(1.1);
+}
+
+/* Project Section */
+.project-section {
+  padding: 4rem 2rem;
+}
+
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-container #headingourprojects {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-image: linear-gradient(to right, #f87c00, #ff0404);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-card {
+  /* background-color: #fff; */
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.project-info {
+  padding: 1.5rem;
+  height: 85%;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to right, #2f00ff, #ff00ea);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.project-info p {
+  font-size: 1.2rem;
+  color: #000000;
+  /* margin-bottom: 1.5rem; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+.learnMore {
+  text-align: center;
+}
+
+.learnMore a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.learnMore a:hover {
+  background-color: #0056b3;
+}
+
 /* Team Section Styles */
 #headingourteam {
   font-size: 35px;
-  background-image: linear-gradient(to right, #2b00ff, #48ff00);
+  background-image: linear-gradient(to right, #ff0000, #8c00ff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .team-section {
-  padding: 50px 20px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -539,9 +602,8 @@ body.dark-mode .card .team-info p {
   text-align: center;
 }
 
-.team-info .person-info{
-  height:8rem;
-  margin-bottom:1rem;
+.team-info .person-info {
+  height: 8rem;
 }
 
 .team-info h3 {
@@ -550,21 +612,20 @@ body.dark-mode .card .team-info p {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
 }
 
 .team-info p {
-  background-image: linear-gradient(to right, #ff0173, #2f00ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.1rem;
+  color: #000000;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
 .team-info .role {
   font-weight: 500;
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #ee2400;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ff0000;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -591,6 +652,283 @@ body.dark-mode .card .team-info p {
 .social-icons i:hover {
   color: #2201f8;
   transform: scale(1.6);
+}
+
+/* Club Members Section Styles */
+.club-members-section {
+  margin-top: 80px;
+  padding: 20px 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.club-members-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+#headingclubmembers {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  background-image: linear-gradient(to right, #ff3c00, #2f00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.club-members-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 20px; */
+}
+
+.club-member-card {
+  /* background-color: #fff; */
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  flex: 1;
+  min-width: 335px;
+  max-width: 380px;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+.club-member-photo {
+  position: relative;
+  height: 150px; /* Decrease the height to make the image smaller */
+  width: 150px; /* Add this line to set the width */
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #2d5084;
+  padding: 4px;
+  background-clip: content-box;
+  box-shadow: inset 150px 150px 150px 150px #ffffff;
+  border: 1px solid #fff;
+  margin-top: 20px;
+  margin-left: 110px; /* Add this line to center the photo */
+}
+
+.club-member-info {
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.club-member-info h3 {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to right, #000000, #ff002b, #3001ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* margin-bottom: 1rem; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0.5rem 0;
+}
+
+.club-member-info p {
+  font-size: 1.3rem;
+  color: #000000;
+  /* margin-bottom: 1rem; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.4rem 0;
+}
+
+.club-member-role p {
+  font-size: 1.6rem;
+}
+
+.club-member-intro {
+  text-align: center;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.club-member-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.club-member-social-icons a {
+  color: #0008ff;
+  font-size: 30px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  text-decoration: none;
+}
+
+.club-member-social-icons i:hover {
+  color: #2201f8;
+  transform: scale(1.6);
+}
+
+.view-more {
+  text-align: right;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.ocd-member-link p {
+  color: #000000;
+  text-align: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 740px;
+  margin-bottom: 20px;
+}
+
+/* dark-mode-button */
+.dark-mode-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode-button:hover {
+  background-color: hsl(54, 98%, 51%);
+  color: #000;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  color: #000000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+body.dark-mode .hero-section,
+body.dark-mode nav,
+body.dark-mode .team-section,
+body.dark-mode .programs-section,
+body.darkmode .project-section,
+body.dark-mode footer {
+  background-color: #000000;
+}
+
+body.dark-mode .hero-section h1,
+body.dark-mode nav a,
+body.dark-mode .team-section h1,
+body.dark-mode .programs-section h1,
+body.dark-mode .container h1,
+body.dark-mode nav a:hover,
+body.darkmode nav,
+body.dark-mode nav .dropdown-content,
+body.dark-mode nav .dropdown-content a,
+body.dark-mode nav .dropdown-content a:hover,
+body.dark-mode .programs-section h3,
+body.dark-mode .programs-section h1,
+body.dark-mode .nav-toggle i,
+body.dark-mode .dark-mode-button,
+body.dark-mode #headingourprojects,
+body.dark-mode #herosectionheading,
+body.dark-mode #headingclubmembers,
+body.dark-mode .project-container h1,
+body.dark-mode .dark-mode-button:hover,
+body.dark-mode .card,
+body.dark-mode .card:hover,
+body.dark-mode .card .team-info h2,
+body.dark-mode .card .team-info p {
+  color: #ffffff;
+}
+
+body.dark-mode nav a,
+body.darkmode nav .dropdown-content a {
+  background-color: #000000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+body.dark-mode nav .dropdown-content {
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .dark-mode-button {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.dark-mode nav a:hover,
+body.darkmode nav .dropdown-content a:hover {
+  background-color: #02ff28;
+  color: #fff;
+}
+
+/* Include Font Awesome library */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+body.dark-mode .dark-mode-button .fa-moon {
+  display: none;
+}
+
+body.dark-mode .dark-mode-button .fa-sun {
+  display: inline;
+}
+
+body.light-mode .dark-mode-button .fa-moon {
+  display: inline;
+}
+
+body.light-mode .dark-mode-button .fa-sun {
+  display: none;
+}
+
+/* Toggle Icon */
+.dark-mode-button i {
+  transition: transform 0.3s;
+}
+
+.dark-mode-button.active i {
+  transform: rotate(180deg);
+}
+
+body.dark-mode .card {
+  background-color: grey;
+  box-shadow: 0 4px 6px rgba(224, 217, 217, 0.2);
+}
+
+body.dark-mode .card:hover {
+  box-shadow: 0 8px 16px rgba(224, 217, 217, 0.3);
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+body.dark-mode .card .team-info h2,
+body.dark-mode .card .team-info p {
+  color: white;
 }
 
 /* Footer Styles */
@@ -691,341 +1029,5 @@ ul li a:hover {
 .suggestion a {
   color: rgb(0, 0, 0);
   font-weight: 900;
-  text-decoration: none;
-}
-#headingourprogram {
-  font-size: 40px;
-  background-image: linear-gradient(to right, #a30f79, #251665);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Programs Section Styles */
-.programs-section {
-  padding: 10px 20px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-.programs-container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.programs-container a {
-  font-weight: 900;
-  color: #ffffff;
-
-  margin-top: 0px;
-  margin-left: 3%;
-}
-.learnMore {
-  z-index: 2;
-}
-.programs-container a:hover {
-  border-style: solid;
-  border-color: #ffffff;
-}
-
-.programs-container h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 30px;
-}
-
-.programs-cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.program-card {
-  /* background: #053a62; */
-  border-radius: 10px;
-  background-color: #fffdfd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  flex: 1;
-  min-width: 280px;
-  max-width: 350px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.program-photo {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.program-info {
-  text-align: center;
-  background-color: #ffffff;
-  margin-bottom: 15px;
-  height: 35%;
-}
-
-.program-info h3 {
-  margin: 15px 0 10px;
-  background-image: linear-gradient(to right, #2f00ff, #09ff00);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.program-info p {
-  font-size: 16px;
-  color: #000000;
-  padding: 5px;
-  background-image: linear-gradient(to right, #a30f79, #251665);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.view-demo {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #072e7c;
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.program-card:hover .program-photo {
-  transform: scale(1.1);
-}
-
-/* Project Section */
-.project-section {
-  padding: 4rem 2rem;
-}
-
-.project-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#headingourprojects {
-  font-size: 2.5rem;
-  color: #ffffff;
-  margin-bottom: 3rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-image: linear-gradient(to right, #a30f79, #251665);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.project-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.project-card {
-  /* background-color: #fff; */
-  border-radius: 8px;
-  background-color: #ffffff;
-  color: #000000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
-  flex: 1;
-  min-width: 300px;
-  max-width: 350px;
-  transition: transform 0.3s ease-in-out;
-  overflow: hidden;
-  padding-bottom: 50px;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-}
-
-.project-photo {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.project-info {
-  padding: 1.5rem;
-  height:85%;
-}
-
-.project-info h3 {
-  font-size: 1.5rem;
-  background-image: linear-gradient(to right, #2f00ff, #09ff00);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-.project-info p {
-  font-size: 1rem;
-  background-image: linear-gradient(to right, #ff000d, #5500ff, #ff000044);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* margin-bottom: 1.5rem; */
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  line-height: 1.6;
-}
-
-.learnMore {
-  text-align: center;
-}
-
-.learnMore a {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #007bff;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.learnMore a:hover {
-  background-color: #0056b3;
-}
-/* ocd members */
-/* Club Members Section Styles */
-.club-members-section {
-  padding: 120px 0px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-.club-members-container {
-  max-width: 1300px;
-  margin: auto;
-}
-
-#headingclubmembers {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 30px;
-  background-image: linear-gradient(to right, #09ff00, #2f00ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.club-members-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* gap: 20px; */
-}
-
-.club-member-card {
-  /* background-color: #fff; */
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
-  flex: 1;
-  min-width: 335px;
-  max-width: 380px;
-  transition: transform 0.3s ease-in-out;
-  overflow: hidden;
-  flex-direction: column;
-  align-items: center;
-}
-
-.club-member-photo {
-  position: relative;
-  height: 200px;
-  object-fit: cover;
-  border-radius:50% ;
-  background-color: #2d5084;
-  padding: 4px;
-  background-clip: content-box;
-  box-shadow: inset 150px 150px 150px 150px #2d5084;
-  border: 3px solid #fff;
-}
-
-.club-member-info {
-  padding: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.club-member-info h3 {
-  font-size: 1.5rem;
-  background-image: linear-gradient(to right, #0077b6, #ff758c, #190571);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* margin-bottom: 1rem; */
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  margin: 0.5rem 0;
-}
-
-.club-member-info p {
-  font-size: 1.2rem;
-  background-image: linear-gradient(to right, #01000844, #fa7900, #190571);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* margin-bottom: 1rem; */
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  line-height: 1.6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0.4rem 0;
-}
-
-.club-member-intro{
-  text-align: center;
-  height:10rem;
-  margin-bottom:1rem;
-}
-
-.club-member-social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.club-member-social-icons a {
-  color: #0008ff;
-  font-size: 30px;
-  transition: color 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  border-radius: 50%;
-  background-color: #f8f8f8;
-  text-decoration: none;
-}
-
-.club-member-social-icons i:hover {
-  color: #2201f8;
-  transform: scale(1.6);
-}
-
-.view-more {
-  text-align: right;
-  margin-top: 10px;
   text-decoration: none;
 }
