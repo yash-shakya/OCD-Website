@@ -16,10 +16,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/feedback.css" />
+    <link rel="stylesheet" href="../styles/feedback.css" />
   </head>
   <body>
-    <!-- Navbar -->
     <!-- Navbar -->
     <nav>
       <div class="nav-content">
@@ -66,23 +65,25 @@
     </nav>
 
     <!--Feedback-Section-->
-    <div class="feedback-section">
-      <h2>Feedback</h2>
-      <form action="submit_feedback.php" method="post">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="issue">Issue:</label>
-          <textarea id="issue" name="issue" rows="4" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+    <div class="feedback">
+      <div class="feedback-section">
+        <h2>Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="issue">Issue:</label>
+            <textarea id="issue" name="issue" rows="4" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
 
     <!-- Footer -->
