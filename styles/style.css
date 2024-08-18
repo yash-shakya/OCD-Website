@@ -517,7 +517,7 @@ body.dark-mode .card .team-info p {
   color: #000;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 20px 20px 10px;
   flex: 1;
   min-width: 280px;
   max-width: 350px;
@@ -537,6 +537,11 @@ body.dark-mode .card .team-info p {
 
 .team-info {
   text-align: center;
+}
+
+.team-info .person-info{
+  height:8rem;
+  margin-bottom:1rem;
 }
 
 .team-info h3 {
@@ -839,6 +844,7 @@ ul li a:hover {
   max-width: 350px;
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
+  padding-bottom: 50px;
 }
 
 .project-card:hover {
@@ -855,10 +861,11 @@ ul li a:hover {
 
 .project-info {
   padding: 1.5rem;
+  height:85%;
 }
 
 .project-info h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   background-image: linear-gradient(to right, #2f00ff, #09ff00);
   -webkit-background-clip: text;
   background-clip: text;
@@ -868,12 +875,12 @@ ul li a:hover {
 }
 
 .project-info p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   background-image: linear-gradient(to right, #ff000d, #5500ff, #ff000044);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   line-height: 1.6;
 }
@@ -988,6 +995,8 @@ ul li a:hover {
 
 .club-member-intro{
   text-align: center;
+  height:10rem;
+  margin-bottom:1rem;
 }
 
 .club-member-social-icons {
